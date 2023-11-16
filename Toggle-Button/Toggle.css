@@ -1,0 +1,45 @@
+body{
+    background-color: lightblue;
+}
+
+.heading{
+    justify-content: center;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.toggleButton{
+    display: none;
+}
+
+.toggleButtonLabel{
+    display: inline-block;
+    height: 40px;
+    width: 80px;
+    background-color: #ccc;
+    cursor: pointer;
+    border-radius: 18px;
+    position: relative;
+    left: 45vw;
+}
+
+.toggleButtonLabel::before{
+    content: "";
+    width: 35px;
+    height: 32px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 3px;
+    border-radius: 21px;
+    transition: 0.3s;
+}
+
+.toggleButton:checked + .toggleButtonLabel{
+    background-color: #4caf50;
+}
+
+.toggleButton:checked + .toggleButtonLabel::before{
+    left: calc(100% - 38px);
+}
