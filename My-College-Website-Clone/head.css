@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: 'Gill Sans MT';
+}
+
+.header {
+    display: flex;
+    justify-content: right;
+    background-color: azure;
+    padding-right: 60px;
+    font-size: 1.35vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header a {
+    border-left: 1.5px solid;
+    border-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.812);
+}
+
+.userImg {
+    height: auto;
+    width: 15%;
+    padding-right: 5px;
+}
+
+.cllgName {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.Cllglogo {
+    height: auto;
+    width: 45%;
+}
+
+.headButton {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.headButton button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.55vw;
+}
+
+.headButton .search {
+    background-color: #146ecf;
+    border-color: #146ecf;
+}
+
+.headButton .search:hover {
+    transition: background 2s;
+    background-color: cadetblue;
+}
+
+.headButton .login:hover {
+    transition: background 2s;
+    background-color: coral;
+}
+
+.headButton button:hover{
+    transform: scale(1.05);
+}
+
+.headButton .login {
+    background-color: #e30009;
+    border-color: #e30009;
+}
+
+.headButton img {
+    width: 25%;
+    height: auto;
+    padding: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #033468;
+    padding: 15px;
+    font-size: 1.5vw;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: black;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #033468;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    align-items: center;
+    color: white;
+    font-size: 1.40vw;
+}

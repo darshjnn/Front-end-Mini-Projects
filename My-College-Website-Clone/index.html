@@ -1,1 +1,125 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEC</title>
+    <link rel="shortcut icon" href="/UEC/uec_logo.png" type="image/png">
+    <link rel="stylesheet" href="/Front-end-Mini-Projects/My-College-Website-Clone/head.css">
+    <style>        
+        .content {
+            padding: 20px;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            font-size: 1.6vw;
+            align-items: center;
+        }
+        
+        .uecImg {
+            height: 25vw;
+            width: auto;
+            border: 1px outset;
+            border-radius: 10px;
+        }
+        
+        .right {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        
+        .right div {
+            display: flex;
+            border: 1px solid;
+            border-radius: 10px;
+            border-color: rgba(0, 0, 0, 0.25);
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: cadetblue;
+        }
+        
+        .right img {
+            height: 60%;
+            width: auto;
+        }
+        
+        .right div:hover {
+            cursor: pointer;
+            background-color: azure;
+            transition: background 2s;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#"><img src="/Front-end-Mini-Projects/My-College-Website-Clone/user.png"           alt="userAdmin" class="userImg">Institution User Login </a>
+        
+        <a href="#"><img src="/Front-end-Mini-Projects/My-College-Website-Clone/mail.png"                alt="mail" class="userImg">Web Mail </a>    
+        
+        <a href="#"><img src="/Front-end-Mini-Projects/My-College-Website-Clone/chat.png"
+        alt="chat" class="userImg">Contact Us</a>            
+        </div>
+        
+        <div class="cllgName">
+            <img src="/Front-end-Mini-Projects/My-College-Website-Clone/name.png" alt="Uec Image" class="Cllglogo">
+            <div class="headButton">
+                <button type="button" class="search"><img src="/Front-end-Mini-Projects/My-College-Website-Clone/search.png" alt="search">Search</button>
+                <button type="button" class="login"><img src="/Front-end-Mini-Projects/My-College-Website-Clone/userlogin.png" alt="userLogin">Student Login</button>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <nav>
+                <a href="/Front-end-Mini-Projects/My-College-Website-Clone/index.html">Home</a>
+                <a href="/Front-end-Mini-Projects/My-College-Website-Clone/Course.html">Courses</a>
+                <a href="/Front-end-Mini-Projects/My-College-Website-Clone/Department.html">Department</a>
+                <a href="/Front-end-Mini-Projects/My-College-Website-Clone/Faculties.html">Faculties</a>
+                <a href="/Front-end-Mini-Projects/My-College-Website-Clone/Help.html">Help & Support</a>
+            </nav>
+        </div>
+        
+        <div class="content">
+            <div class="left">
+                <img src="/Front-end-Mini-Projects/My-College-Website-Clone/home_slide.jpg" alt="UEC" class="uecImg">
+            </div>
+            
+            <div class="right">
+                <div class="contentLink1">
+                    Academic Calendar
+                    <img src="/Front-end-Mini-Projects/My-College-Website-Clone/icons8-calendar-100.png" alt="Calendar" class="divConImg">
+                </div>
+                <div class="contentLink2">New Student Registration
+                    <img src="/Front-end-Mini-Projects/My-College-Website-Clone/icons8-registration-100.png" alt="User Registration">
+                </div>
+                <div class="contentLink3">
+                    Result Declared
+                    <img src="/Front-end-Mini-Projects/My-College-Website-Clone/icons8-result-100.png" alt="Result">
+                </div>
+                <div class="contentLink4">
+                    Alumni Registration
+                    <img src="/Front-end-Mini-Projects/My-College-Website-Clone/icons8-graduation-cap-100.png" alt="Alumni Registration">
+                </div>
+                <div class="contentLink5">
+                    Students Report
+                    <img src="/Front-end-Mini-Projects/My-College-Website-Clone/icons8-report-100.png" alt="Report">
+                </div>
+                <div class="contentLink6">
+                    Scholarship
+                    <img src="/Front-end-Mini-Projects/My-College-Website-Clone/icons8-scholarship-100.png" alt="Scholarship">
+                </div>
+            </div>        
+        </div>
+        <div class="footer">
+            <div class="links">Disclaimer&nbsp;/&nbsp;Privacy&nbsp;/&nbsp;Sitemap</div>
+            <div class="copyright">&#169; &nbsp;2023 UEC, Ujjain.&nbsp; All Rights Reserved</div>
+            <div class="designedby">Designed and Developed by CRISP</div>
+        </div>
+    </body>
+    </html>
