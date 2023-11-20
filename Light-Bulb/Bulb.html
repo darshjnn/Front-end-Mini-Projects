@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <img id="bulb" class="center" src="/Front-end-Mini-Projects/Light-Bulb/off.jpg" alt="Bulb Off">
+    <img id="bulb" class="center" src="/Front-end-Mini-Projects/Light-Bulb/off.png" alt="Bulb Off">
     <button id="button" class="center btn">Turn On</button>
 
     <script>
@@ -39,11 +39,11 @@
         btn.addEventListener('click', toggleImg);
         function toggleImg(e){
             if(btn.textContent.includes('On')){
-                bulb.src = '/Front-end-Mini-Projects/Light-Bulb/on.jpg';
+                bulb.src = '/Front-end-Mini-Projects/Light-Bulb/on.png';
                 btn.textContent = "Turn Off";
                 btn.style.backgroundColor = 'green';
             } else{
-                bulb.src = '/Front-end-Mini-Projects/Light-Bulb/off.jpg';
+                bulb.src = '/Front-end-Mini-Projects/Light-Bulb/off.png';
                 btn.textContent = "Turn On";
                 btn.style.backgroundColor = 'red';
             }
