@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <style>
+        body{
+            background-color: black;
+        }
 
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img{
+            height: 80vh;
+            width: auto;
+        }
+
+        .btn{
+            padding: 10px;
+            font-size: 2.5vh;
+            background-color: red;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img id="bulb" class="center" src="/Front-end-Mini-Projects/Light-Bulb/off.jpg" alt="Bulb Off">
+    <button id="button" class="center btn">Turn On</button>
+
+    <script>
+        let img = document.getElementById('bulb');
+        let btn = document.getElementById('button');
+
+        btn.addEventListener('click', toggleImg);
+        function toggleImg(e){
+            if(btn.textContent.includes('On')){
+                bulb.src = '/Front-end-Mini-Projects/Light-Bulb/on.jpg';
+                btn.textContent = "Turn Off";
+                btn.style.backgroundColor = 'green';
+            } else{
+                bulb.src = '/Front-end-Mini-Projects/Light-Bulb/off.jpg';
+                btn.textContent = "Turn On";
+                btn.style.backgroundColor = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
