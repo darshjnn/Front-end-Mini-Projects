@@ -56,10 +56,10 @@ body{
 .picture{
     position: absolute;
     border: 3px solid;
-    border-color: #183D3D;
+    border-color: #5C8374;
     border-radius: 50%;
     padding: 2px;
-    top: 19%;
+    top: 20%;
     display: flex;
     justify-content: center;
     height: 150px;
@@ -97,4 +97,13 @@ body{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+}
+
+.contact div{
+    border-radius: 18px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #5C8374;
+    font-size: large;
 }
