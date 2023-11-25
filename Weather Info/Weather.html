@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Info</title>
     <link rel="stylesheet" href="/Front-end-Mini-Projects/Weather Info/Weather.css">
 </head>
+
 <body>
     <section>
         <div class="container">
             <div class="search">
                 <input type="text" placeholder="Enter Location" id="location">
-                <label for="location"><img src="/Front-end-Mini-Projects/Weather Info/Images/search-alt-2-regular-24.png" alt="search"></label>
-            </div>    
-            
-            <div class="weather">
-                <img src="/Front-end-Mini-Projects/Weather Info/Images/clear.png" alt="clear">
-                <h1 class="temp">22&deg;C</h1>
-                <h2 class="city">Bhopal</h2><br><br>
+                <label for="location"><img
+                        src="/Front-end-Mini-Projects/Weather Info/Images/search-alt-2-regular-48.png"
+                        alt="search"></label>
+                <button id="curLoc"><img
+                        src="/Front-end-Mini-Projects/Weather Info/Images/current-location-regular-48.png"
+                        alt="Current Location"></button>
             </div>
-            
+
+            <div class="weather">
+                <div class="MainImg">
+                    <img src="/Front-end-Mini-Projects/Weather Info/Images/noValue.png" alt="Weather Image">
+                </div>
+                <div>
+                    <h1 class="temp">--&deg;C</h1>
+                    <h2 class="city">Enter Location</h2><br><br>
+                </div>
+            </div>
+
             <div class="details">
                 <div class="climate humidity">
-                    <img src="/Front-end-Mini-Projects/Weather Info/Images/humidity.png" alt="humidity" class="weatherImg">
+                    <img src="/Front-end-Mini-Projects/Weather Info/Images/humidity.png" alt="humidity"
+                        class="weatherImg">
                     <div class="value">
-                        <p class="humid">53%</p>
+                        <p class="humid getValue">-- %</p>
                         <p>Humidity</p>
                     </div>
-                    
+
                 </div>
                 <div class="climate speed">
-                    <img src="/Front-end-Mini-Projects/Weather Info/Images/wind.png" alt="wind speed" class="weatherImg">
+                    <img src="/Front-end-Mini-Projects/Weather Info/Images/wind.png" alt="wind speed"
+                        class="weatherImg">
                     <div class="value">
-                        <p class="speed">5.66 Km/h</p>
+                        <p class="speed getValue">-- Km/h</p>
                         <p>Wind Speed</p>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
-    
+
 </body>
+
 </html>

@@ -10,6 +10,9 @@ body{
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 530px;
     width: 430px;
     border-radius: 25px;
@@ -18,17 +21,31 @@ body{
     padding: 30px 25px 20px 25px;
 }
 
+.weather, .weather div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 5px;
+    font-size: larger;
+}
+
+.MainImg img{
+    height: 200px;
+    width: 100%;
+}
+
 .search{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 input{
     border-radius: 15px;
     border: none;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     height: 35px;
     width: 70%;
     text-align: center;
@@ -39,13 +56,14 @@ input{
 input::placeholder{
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 input:focus{
     border: none;
     outline: none;
-    transform: scale(1.04);
+    transform: scale(1.07);
+    border-radius: 20px;
 }
 
 .search label{
@@ -53,28 +71,36 @@ input:focus{
     justify-content: center;
 }
 
-.search label img{
+.search label img, #curLoc img{
     height: 40px;
     transition: all 0.3s ease-in-out;
 }
 
-.search label img:hover{
-    transform: scale(1.08);
+#curLoc{
+    border: none;
+    background: none;
 }
 
-.weather{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 5px;
-    font-size: larger;
+#curLoc img{
+    background: none;
+}
+
+.search label img:hover, #curLoc img:hover{
+    transform: scale(1.1);
+}
+
+.temp{
+    font-size: 45px;
+}
+
+.city{
+    font-size: 35px;
 }
 
 .details{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     line-height: 5px;
     padding: 25px;
 }
@@ -82,10 +108,14 @@ input:focus{
 .climate{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .weatherImg{
     height: 50px;
     padding: 10px;
+}
+
+.getValue{
+    font-size: 25px;
 }
