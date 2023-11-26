@@ -13,7 +13,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 530px;
+    height: auto;
     width: 430px;
     border-radius: 25px;
     background: linear-gradient(-45deg, #3c4061, #46e0b5);
@@ -28,6 +28,17 @@ body{
     justify-content: center;
     line-height: 5px;
     font-size: larger;
+}
+
+.mainDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainDetail h1{
+    padding: 20px;
 }
 
 .MainImg img{
@@ -66,26 +77,26 @@ input:focus{
     border-radius: 20px;
 }
 
-.search label{
+.search button{
     display: flex;
     justify-content: center;
 }
 
-.search label img, #curLoc img{
-    height: 40px;
-    transition: all 0.3s ease-in-out;
+.search button{
+    background: none;
+    border: none;
 }
 
-#curLoc{
-    border: none;
-    background: none;
+.search img{
+    height: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
 #curLoc img{
     background: none;
 }
 
-.search label img:hover, #curLoc img:hover{
+.search img:hover{
     transform: scale(1.1);
 }
 
@@ -100,9 +111,9 @@ input:focus{
 .details{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     line-height: 5px;
     padding: 25px;
+    justify-content: space-between;
 }
 
 .climate{
