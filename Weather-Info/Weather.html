@@ -18,21 +18,22 @@
             <div class="search">
                 <input type="text" placeholder="Enter Location" id="location" spellcheck="false">
                 <button type="submit" for="location" id="btn" onclick="getWeather()"><img
-                    src="/Front-end-Mini-Projects/Weather-Info/Images/search-alt-2-regular-48.png" alt="search">
+                        src="/Front-end-Mini-Projects/Weather-Info/Images/search-alt-2-regular-48.png" alt="search">
                 </button>
                 <button id="curLoc" type="submit" onclick="myLoc()"><img
-                    src="/Front-end-Mini-Projects/Weather-Info/Images/current-location-regular-48.png"
-                    alt="Current Location">
+                        src="/Front-end-Mini-Projects/Weather-Info/Images/current-location-regular-48.png"
+                        alt="Current Location">
                 </button>
             </div>
-            
+
             <div id="error">
                 <p>Invalid City Name</p>
             </div>
-            
+
             <div class="weather">
                 <div class="MainImg">
-                    <img src="/Front-end-Mini-Projects/Weather-Info/Images/noValue.png"  id="weathImg" alt="Weather Image">
+                    <img src="/Front-end-Mini-Projects/Weather-Info/Images/noValue.png" id="weathImg"
+                        alt="Weather Image">
                 </div>
                 <div>
                     <div class="cityName">
@@ -41,39 +42,39 @@
                     <span class="mainDetail">
                         <div class="mainDetailDesc">
                             <p id="description">---</p>
-                        </div>     
+                        </div>
                         <div>
                             <p id="temp">--&deg;C</p>
-                        </div>                  
+                        </div>
                     </span>
                 </div>
             </div>
-            
+
             <div class="details">
                 <div class="climate humidity">
                     <img src="/Front-end-Mini-Projects/Weather-Info/Images/humidity.png" alt="humidity"
-                    class="weatherImg">
+                        class="weatherImg">
                     <div class="value">
                         <p class="humid getValue" id="humid">-- %</p>
                         <p>Humidity</p>
                     </div>
                 </div>
-                
+
                 <div class="climate speed">
                     <img src="/Front-end-Mini-Projects/Weather-Info/Images/wind.png" alt="wind speed"
-                    class="weatherImg">
+                        class="weatherImg">
                     <div class="value">
                         <p class="speed getValue" id="speed">-- Km/hr</p>
                         <p>Wind Speed</p>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
-    
+
     <script src="/Front-end-Mini-Projects/Weather-Info/Weather.js"></script>
-    
+
 </body>
 
 </html>
