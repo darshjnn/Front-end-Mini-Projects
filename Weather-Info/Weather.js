@@ -32,6 +32,7 @@ async function getWeather() {
         document.getElementById("error").style.display = "block";
         contain.style.background = 'rgba(0, 0, 0, 0.3)';
         temp.textContent = "-- °C";
+        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/loop.mp4';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/noValue.png';
         city.textContent = "Enter Valid Location";
         desc.textContent = "---";
@@ -46,7 +47,6 @@ async function getWeather() {
     inpLoc.value = data.name;
     city.textContent = data.name;
     desc.textContent = data.weather[0].description;
-    // desc.textContent = "clear";
     desc.textContent = desc.textContent.charAt(0).toUpperCase() + desc.textContent.slice(1);
     humidity.textContent = data.main.humidity + "%";
     speed.textContent = data.wind.speed + " Km/hr";
@@ -119,16 +119,17 @@ function getImgBg() {
         contain.style.background = 'linear-gradient(-45deg, rgb(247, 140, 162), rgb(147, 140, 162))';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/snow.png';
         contain.style.color = "rgba(255, 246, 224, 1)"         
-    } else if (desc.textContent.includes("ist")) {       //NEED TO ADD VIDEO
-        contain.style.background = 'linear-gradient(-45deg, rgb(247, 140, 162), rgb(147, 140, 162))';
+    } else if (desc.textContent.includes("ist")) {       //DONE
+        contain.style.background = 'linear-gradient(-45deg, rgba(82, 109, 130, 0.1), rgba(157, 178, 191, 0.1))';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/mist.png';
-        contain.style.color = "rgba(255, 246, 224, 1)"         
+        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/mist.mp4';
+        contain.style.color = "rgba(255, 246, 224, 1)";         
     } else if (desc.textContent.includes("aze")) {     //DONE
         contain.style.background = 'linear-gradient(-45deg, rgba(255, 235, 216, 0.2), rgba(147, 140, 162, 0.4))';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/haze.png';
         video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/haze.mp4';
         contain.style.color = "rgba(43, 42, 76, 1)";         
-    } else if (desc.textContent.includes("Fog") || desc.textContent.includes("Smoke")) {
+    } else if (desc.textContent.includes("Fog") || desc.textContent.includes("Smoke")) { //NEED TO ADD VIDEO
         contain.style.background = 'linear-gradient(-45deg, rgb(247, 140, 162), rgb(147, 140, 162))';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/fog.png';
         contain.style.color = "rgba(255, 246, 224, 1)"         
@@ -136,7 +137,8 @@ function getImgBg() {
     else {
         contain.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/noValue.png';
-        contain.style.color = "rgba(255, 246, 224, 1)"         
+        contain.style.color = "rgba(255, 246, 224, 1)";
+        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/loop.mp4';
     }
 }
 
