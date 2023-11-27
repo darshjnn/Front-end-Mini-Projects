@@ -1,4 +1,6 @@
 body{
+    padding: 0;
+    margin: 0;
     height: 100vh;
     width: 100%;
     padding: 15px;
@@ -10,32 +12,85 @@ body{
     justify-content: center;
 }
 
+p{
+    margin: 25px;
+}
+
+#bgVdo{
+    position: fixed;
+    width: 120%;
+    height: 130%;
+}
+
+#vdoBttn{
+    z-index: 2;
+    position: absolute;
+    padding: 5px 10px 5px 10px;
+    left: 30px;
+    top: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(25px);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: antiquewhite;
+    transition: all 0.4s;
+}
+
+#vdoBttn:hover{
+    background-color: rgba(95, 158, 160, 0.4);
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.452);
+}
+
+section{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+}
+
 .container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
-    width: 430px;
+    height: 600px;
+    width: 490px;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 30px 25px 20px 25px;
     backdrop-filter: blur(15px);
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.452);
+}
+
+#error{
+    display: none;
+    text-align: center;
+    color: red;
+    font-size: 20px;
 }
 
 .weather{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 20px;
 }
 
 .mainDetail, .cityName{
-    padding: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.cityName{
+    font-size: 30px;
+}
+
+.mainDetail{
+    font-size: 35px;
 }
 
 .mainDetailDesc{
@@ -87,14 +142,12 @@ input:focus{
     outline: none;
     transform: scale(1.07);
     border-radius: 20px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.452);
 }
 
 .search button{
     display: flex;
     justify-content: center;
-}
-
-.search button{
     background: none;
     border: none;
 }
@@ -109,6 +162,7 @@ input:focus{
 }
 
 .search img:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.452);
     transform: scale(1.1);
 }
 
@@ -131,12 +185,11 @@ input:focus{
 .climate{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .weatherImg{
-    height: 50px;
-    padding: 10px;
+    height: 60px;
 }
 
 .getValue{

@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather-Info</title>
     <link rel="stylesheet" href="/Front-end-Mini-Projects/Weather-Info/Weather.css">
-    <!-- <link rel="shortcut icon" href="/Front-end-Mini-Projects/Weather-Info/Images/logo.png" type="image/png"> -->
+    <link rel="shortcut icon" href="/Front-end-Mini-Projects/Weather-Info/Images/logo.png" type="image/png">
 </head>
 
 <body>
+
+    <video autoplay loop muted id="bgVdo" src="/Front-end-Mini-Projects/Weather-Info/Videos/loop.mp4"></video>
+    <button id="vdoBttn" onclick="vdoOper()">Pause Video</button>
     <section>
         <div class="container" id="container">
             <div class="search">
-                <input type="text" placeholder="Enter Location" id="location">
-                <button type="submit" for="location" id="btn" onclick="getLocation()"><img
+                <input type="text" placeholder="Enter Location" id="location" spellcheck="false">
+                <button type="submit" for="location" id="btn" onclick="getWeather()"><img
                     src="/Front-end-Mini-Projects/Weather-Info/Images/search-alt-2-regular-48.png" alt="search">
                 </button>
                 <button id="curLoc" type="submit" onclick="myLoc()"><img
@@ -23,22 +26,26 @@
                 </button>
             </div>
             
+            <div id="error">
+                <p>Invalid City Name</p>
+            </div>
+            
             <div class="weather">
                 <div class="MainImg">
                     <img src="/Front-end-Mini-Projects/Weather-Info/Images/noValue.png"  id="weathImg" alt="Weather Image">
                 </div>
                 <div>
+                    <div class="cityName">
+                        <p id="city">Enter Location</p>
+                    </div>
                     <span class="mainDetail">
                         <div class="mainDetailDesc">
-                            <h1 id="description">--- </h1>
+                            <p id="description">---</p>
                         </div>     
                         <div>
-                            <h1 id="temp">--&deg;C</h1>
+                            <p id="temp">--&deg;C</p>
                         </div>                  
                     </span>
-                    <div class="cityName">
-                        <h2 id="city">Enter Location</h2>
-                    </div>
                 </div>
             </div>
             
@@ -51,7 +58,7 @@
                         <p>Humidity</p>
                     </div>
                 </div>
-
+                
                 <div class="climate speed">
                     <img src="/Front-end-Mini-Projects/Weather-Info/Images/wind.png" alt="wind speed"
                     class="weatherImg">
