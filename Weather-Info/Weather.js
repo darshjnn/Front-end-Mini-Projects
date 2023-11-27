@@ -96,19 +96,21 @@ function getImgBg() {
         contain.style.color = "rgba(238, 242, 150, 1)"
     } else if (desc.textContent.includes("oud")) {     //DONE
         contain.style.background = 'linear-gradient(-45deg, rgba(48, 129, 200, 0.4), rgba(109, 185, 239, 0.4))';
-        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/clouds.mp4'
+        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/clouds.mp4';
         contain.style.color = "rgba(0, 0, 0, 1)"
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/cloud.png';
     } else if (desc.textContent.includes("izzle")) {     //NEED TO ADD VIDEO
         contain.style.background = 'linear-gradient(-45deg, rgb(247, 140, 162), rgb(147, 140, 162))';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/drizzle.png';
         contain.style.color = "rgba(255, 246, 224, 1)"
-    } else if (desc.textContent.includes("hower")) {      //NEED TO ADD VIDEO
-        contain.style.background = 'linear-gradient(-45deg, rgb(247, 140, 162), rgb(147, 140, 162))';
+    } else if (desc.textContent.includes("hower")) {      //DONE
+        contain.style.background = 'linear-gradient(-45deg, rgba(67, 85, 133, 0.3), rgba(147, 140, 162, 0.3))';
+        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/rain.mp4';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/drizzle.png';
         contain.style.color = "rgba(255, 246, 224, 1)"
-    } else if (desc.textContent.includes("ain")) {     //NEED TO ADD VIDEO
-        contain.style.background = 'linear-gradient(-45deg, rgb(247, 140, 162), rgb(147, 140, 162))';
+    } else if (desc.textContent.includes("ain")) {     //DONE
+        contain.style.background = 'linear-gradient(-45deg, rgba(67, 85, 133, 0.3), rgba(147, 140, 162, 0.3))';
+        video.src = '/Front-end-Mini-Projects/Weather-Info/Videos/rain.mp4';
         img.src = '/Front-end-Mini-Projects/Weather-Info/Images/rain.png';
         contain.style.color = "rgba(255, 246, 224, 1)"
     } else if (desc.textContent.includes("torm")) {     //NEED TO ADD VIDEO
