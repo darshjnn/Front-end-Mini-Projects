@@ -1,0 +1,161 @@
+body{
+    background-color: #161A30;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #F0ECE5;
+    margin: 0;
+    padding: 0;
+    background: url('/Front-end-Mini-Projects/Sidebar/Images/bgImg.jpg') right no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #F0ECE5;
+}
+
+.options ul{
+    list-style: none;
+}
+
+.navbar{
+    position: static;
+    height: 100vh;
+    width: 280px;
+}
+
+.navbar .Img{
+    height: 30px;
+}
+
+#barBtn{
+    display: none;
+}
+
+.optionsImg{
+    height: 20px;
+}
+
+.divbarBtn{
+    position: absolute;
+    left: 55px;
+    top: 45px;
+}
+
+.divbarBtn .barBtnImg{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.menu .crossBtnImg{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.Img:hover{
+    transform: scale(1.2);
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    left: -300px;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu .logo{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.logoName{
+    position: absolute;
+    left: 50px;
+}
+
+.crossbar img{
+    position: absolute;
+    left: 225px;
+    top: 18px;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.options{
+    position: absolute;
+    top: 60px;
+    font-size: 20px;
+}
+
+.options li{
+    margin-top: 6px;
+    padding: 14px 20px;
+    line-height: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.options li img{
+    padding-right: 12px;
+}
+
+.options li:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 4px black;
+    border-radius: 10px;
+    background-color: rgba(32, 178, 171, 0.548);
+    backdrop-filter: blur(20px);
+}
+
+.socialMedia{
+    position: absolute;
+    line-height: 60px;
+    top: 520px;
+}
+
+.socialMedia img{
+    padding: 5px;
+}
+
+.socialMedia ul a img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.socialMedia ul a img{
+    height: 35px;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+}
+
+#barBtn:checked~.divbarBtn{
+    opacity: 0;
+}
+
+#barBtn:checked~.menu{
+    left: 0px;
+}
+
+#barBtn:checked~.menu .crossBtnImg{
+    opacity: 1;
+}
