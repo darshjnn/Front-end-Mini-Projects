@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="/Front-end-Mini-Projects/To-Do-List/ToDo.css">
+    <link rel="shortcut icon" href="/Front-end-Mini-Projects/To-Do-List/SVG/notepad-svgrepo-com.svg" type="image/svg">
+</head>
+
+<body>
+
+    <div class="contain">
+        <div class="box">
+            <header>To Do List <img src="/Front-end-Mini-Projects/To-Do-List/SVG/notepad-note-svgrepo-com.svg"
+                    alt="notepad"></header>
+
+            <div class="textarea">
+                <input type="text" id="textCont" placeholder="Add Task">
+                <button id="addBtn" type="submit" for="textCont" onclick="addTask()">Add</button>
+            </div>
+
+            <div class="tasks">
+                <ul id="taskList">
+                    <!-- <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Front-end-Mini-Projects/To-Do-List/ToDo.js"></script>
+</body>
+
+</html>
