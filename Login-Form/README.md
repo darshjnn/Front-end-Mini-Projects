@@ -1,3 +1,3 @@
 # Login Form
-This is a Login form created using HTML,CSS. <br>
+This is a Responsive Login form created using HTML,CSS, JavaScript. <br>
 Author: Darsh Jain

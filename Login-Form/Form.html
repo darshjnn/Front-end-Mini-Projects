@@ -5,13 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Front-end-Mini-Projects/Login-Form/Form.css">
+    <link rel="shortcut icon" href="/Front-end-Mini-Projects/Login-Form/SVG/house-solid.svg" type="image/svg">
 </head>
 
 <body>
-    <div class="form">
-
-    </div>
-</body>
-
-</html>
+    <section class="container">
+        <div class="form">
+            <h1><b>Log In</b></h1>
+            
+            <form action="#">
+                <div class="detail">
+                    <fieldset class="fielduser info">
+                        <legend>UserName</legend>
+                        <input type="text" id="username" placeholder="Type your Username" required>
+                        <label id="userbtn" for="username">
+                            <img src="/Front-end-Mini-Projects/Login-Form/SVG/user-solid.svg" alt="user">
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset class="fieldpsw info">
+                        <legend>Password</legend>
+                        <input type="password" id="password" placeholder="Type your Password" required>
+                        <label id="pswbtn" for="password">
+                            <img src="/Front-end-Mini-Projects/Login-Form/SVG/lock-solid.svg" alt="user">
+                        </label>
+                    </fieldset>
+                    
+                    <div class="forgot">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </div>
+                
+                <div class="loginbtn">
+                    <button type="submit" id="loginbtn">Login</button>
+                </div>
+            </form>
+            
+            <div class="signupOpt">
+                <fieldset class="fieldsignup">
+                    <legend>Or SignUp using</legend>
+                    <a href="#"><img src="/Front-end-Mini-Projects/Login-Form/SVG/icons8-google.svg" alt="google"></a>
+                    <a href="#"><img src="/Front-end-Mini-Projects/Login-Form/SVG/icons8-facebook.svg"
+                        alt="facebook"></a>
+                        <a href="#"><img src="/Front-end-Mini-Projects/Login-Form/SVG/icons8-github.svg" alt="github"></a>
+                    </fieldset>
+                </div>
+                
+                <div class="createacc">
+                    <fieldset class="fieldcreateacc">
+                        <legend>Didn't have an account?</legend>
+                        <a href="#">Create one!!</a>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        
+        <script src="/Front-end-Mini-Projects/Login-Form/Form.js"></script>
+        
+    </body>
+    
+    </html>

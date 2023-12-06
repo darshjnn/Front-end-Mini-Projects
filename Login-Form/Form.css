@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #232D3F;
+    position: fixed;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F9F9E0;
+}
+
+section::before{
+    content: "";
+    -webkit-clip-path: polygon(53% 0, 0 68%, 100% 100%);
+    clip-path: polygon(53% 0, 0 68%, 100% 100%);
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    transform: translate(150px, 400px);
+    background-color: cadetblue;
+    opacity: 0.7;
+}
+
+section{
+    width: 70%;
+}
+
+.form{
+    background: linear-gradient(135deg, #232d3f86, #a0c49d50);
+    margin: 270px auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 550px;
+    max-width: 400px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 5px 15px;
+    border: 2px solid #526D82;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.473);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.form h1{
+    text-align: center;
+}
+
+.form a{
+    text-decoration: none;
+}
+
+.detail{
+    position: relative;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+fieldset{
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.421);
+}
+
+.fieldpsw{
+    margin-bottom: 8px;
+}
+
+.fieldcreateacc{
+    border: none;
+}
+
+.forgot a{
+    float: right;
+}
+
+.info{
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.info input{
+    position: relative;
+    left: 25px;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 90%;
+}
+
+.info input::placeholder{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.95rem;
+}
+
+.info input:focus~label img{
+    transform: scale(1.5);
+}
+
+.info label{
+    position: absolute;
+    background: none;
+    border: none;
+}
+
+.info label img{
+    position: absolute;
+    bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginbtn{
+    width: 100%;
+    padding: 25px 0 25px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.loginbtn button{
+    width: 80%;
+    height: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+}
+
+.fieldsignup legend{
+    text-align: center;
+}
+
+.fieldsignup{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
+.fieldsignup a img{
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+.fieldsignup a img:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.fieldcreateacc{
+    display: flex;
+    justify-content: center;
+}
+
+.fieldcreateacc legend{
+    text-align: center;
+}
