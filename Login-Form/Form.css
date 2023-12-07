@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 body{
+    overflow: scroll;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
     margin: 0;
@@ -67,6 +68,7 @@ section{
 }
 
 fieldset{
+    position: relative;
     border: none;
     border-bottom: 1px solid #EEEEEE;
     margin-bottom: 30px;
@@ -93,34 +95,51 @@ fieldset{
 }
 
 .info input{
+    bottom: 0px;
+    font-size: 20px;
+    font-family: inherit;
+    color: bisque;
     position: relative;
     left: 25px;
-    font-size: 1rem;
     background: none;
     border: none;
     outline: none;
-    height: 100%;
     width: 90%;
 }
 
-.info input::placeholder{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.95rem;
+.info input:focus~label,
+.info input:valid ~label{
+    position: absolute;
+    bottom: 75%;
+    font-size: 14px;
+    transform-style: preserve-3d;
 }
 
-.info input:focus~label img{
+.info input:focus~img{
     transform: scale(1.5);
 }
 
 .info label{
     position: absolute;
-    background: none;
-    border: none;
+    font-size: 1.2rem;
+    bottom: 8px;
+    height: min-content;
+    transition: all 0.3s ease-in-out;
+    transform-origin: left top;
+    width: 90%;
+    left: 13px;
+    pointer-events: none;
 }
 
-.info label img{
+.info span{
+    position: relative;
+    left: 23px;
+}
+
+.info img{
     position: absolute;
-    bottom: 2px;
+    padding: 3px;
+    padding-right: 8px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -168,3 +187,9 @@ fieldset{
 .fieldcreateacc legend{
     text-align: center;
 }
+
+.fielduser{
+    position: relative;
+}
+
+
