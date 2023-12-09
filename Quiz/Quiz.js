@@ -144,3 +144,4 @@ const HardQuestions = [
     },
 ];    
 
+const question = document.getElementById("question");
