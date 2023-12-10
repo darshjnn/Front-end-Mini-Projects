@@ -115,8 +115,18 @@ button:active{
     color: #071952;
 }
 
+#submit:hover{
+    background: #F8DE22;
+    color: #E74646;
+}
+
 #resetlevel{
     width: 120px;
+}
+
+#resetlevel:hover{
+    background: #279EFF;
+    color: #BDCDD6;
 }
 
 .container h1{
