@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/Front-end-Mini-Projects/Quiz/Quiz.css">
+    <link rel="shortcut icon" href="/Front-end-Mini-Projects/Quiz/SVG/bxs-brain.svg" type="image/svg">
+</head>
+
+<body>
+    <div class="quiz">
+        <div class="container">
+            <header>
+                <div class="attempted">
+                    <span id="attemptedNo">--</span><span>/5&nbsp;&nbsp;Attempted&nbsp;</span>
+                </div>
+                
+                <div class="start">
+                    <button type="button" id="start">Start</button>
+                    <button type="button" id="quit">Quit</button>
+                </div>
+            </header>
+            
+            <div class="level" id="level">
+                <button type="button" class="levelBtn" id="easy" value="easy" onclick="selectLevel(event)">Easy</button>
+                <button type="button" class="levelBtn" id="medium" value="medium" onclick="selectLevel(event)">Medium</button>
+                <button type="button" class="levelBtn" id="hard" value="hard" onclick="selectLevel(event)">Hard</button>
+            </div>
+            
+            <main class="mainQuiz">
+                <div class="question">
+                    <h1>Q. <span id="quesnum">--</span></h1>
+                    <p id="question">Your Question will <br> be displayed here...</p>
+                </div>
+                
+                <div class="options" id="answerBtn">
+                    <button type="button" id="opta" class="opt">Option A</button>
+                    <button type="button" id="optb" class="opt">Option B</button>
+                    <button type="button" id="optc" class="opt">Option C</button>
+                    <button type="button" id="optd" class="opt">Option D</button>
+                </div>
+            </main>
+            
+            <div class="navigate">
+                <button type="button" id="nxt">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M4.71 9.17005L16.3 3.07005C19.05 1.62005 22.04 4.55005 20.65 7.33005L19.03 10.57C18.58 11.47 18.58 12.53 19.03 13.43L20.65 16.67C22.04 19.45 19.05 22.37 16.3 20.93L4.71 14.83C2.43 13.63 2.43 10.37 4.71 9.17005Z"
+                    stroke="#292D32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button type="button" id="prev">
+                <?xml version="1.0" encoding="utf-8"?>
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                d="M19.29 9.17005L7.70002 3.07005C4.95002 1.62005 1.96002 4.55005 3.35002 7.33005L4.97002 10.57C5.42002 11.47 5.42002 12.53 4.97002 13.43L3.35002 16.67C1.96002 19.45 4.95002 22.37 7.70002 20.93L19.29 14.83C21.57 13.63 21.57 10.37 19.29 9.17005Z"
+                stroke="#292D32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    
+    <footer>
+        <div class="foot">
+            <button type="reset" id="resetlevel">Reset Level</button>
+            <button type="submit" id="submit">Submit</button>
+        </div>        
+    </footer>
+</div>
+</div>
+
+
+<script src="/Front-end-Mini-Projects/Quiz/Quiz.js"></script>
+
+</body>
+
+</html>
