@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Dosis', sans-serif;
-    background: #232D3F;
+    background: #2C3333;
     color: #F9F9E0;
 }
 
@@ -38,6 +38,7 @@ button{
     font-family: inherit;
     font-weight: 600;
     width: 95px;
+    min-width: max-content;
     height: 45px;
     font-size: 23px;
     border: none;
@@ -67,7 +68,7 @@ button:active{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 35px 0 35px;
+    padding: 0 35px 20px 35px;
 }
 
 .container .level{
@@ -96,7 +97,7 @@ button:active{
 }
 
 #start{
-    background: #9ADE7B;
+    background: #efefef;
 }
 
 #start:hover{
@@ -110,6 +111,10 @@ button:active{
     color: #FFF8C9;
 }
 
+#check{
+    display: none;
+}
+
 #submit{
     background: #E8FFCE;
     color: #071952;
@@ -118,10 +123,6 @@ button:active{
 #submit:hover{
     background: #F8DE22;
     color: #E74646;
-}
-
-#resetlevel{
-    width: 120px;
 }
 
 #resetlevel:hover{
@@ -142,12 +143,14 @@ button:active{
 }
 
 .options button{
+    padding: 2px 6px 2px 6px;
     width: 100%;
     min-height: 40px;
-    font-size: 19px;
+    font-size: 20px;
     min-width: min-content;
     height: max-content;
     overflow-wrap: break-word;
+    text-align: left;
 }
 
 .options button:hover{
@@ -156,12 +159,30 @@ button:active{
 }
 
 .navigate{
+    display: none;
     padding: 15px;
 }
 
 .container .foot{
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch;
+    flex-direction: row;
+}
+
+.options .selected{
+    background-color: #FFB534;
+    color: #31304D;
+}
+
+.scoreboard{
+    display: none;
+    border: 2px solid #526D82;
+    border-radius: 10px;
+    background: linear-gradient(#f3deba9a, #abc4aac2);
+    color: #001524;
+    backdrop-filter: blur(25px);
+}
+
+#foot{
+    display: none;
 }

@@ -29,22 +29,29 @@
                 <button type="button" class="levelBtn" id="hard" value="hard" onclick="selectLevel(event)">Hard</button>
             </div>
             
-            <main class="mainQuiz">
+            <div class="scoreboard" id="scoreboard">
+                <h2>Thank You</h2>
+                <h3 id="mssg">--</h3>
+                <h3>You Scored: <span id="scoreVal">--</span>/5</h3>
+                <h4 id="difficulty">--</h4>
+            </div>
+            
+            <main class="mainQuiz" id="mainQuiz">
                 <div class="question">
                     <h1>Q. <span id="quesnum">--</span></h1>
                     <p id="question">Your Question will <br> be displayed here...</p>
                 </div>
                 
                 <div class="options" id="answerBtn">
-                    <button type="button" id="opta" class="opt">Option A</button>
-                    <button type="button" id="optb" class="opt">Option B</button>
-                    <button type="button" id="optc" class="opt">Option C</button>
-                    <button type="button" id="optd" class="opt">Option D</button>
+                    <button type="button" id="opt0" class="opt">Option 0</button>
+                    <button type="button" id="opt1" class="opt">Option 1</button>
+                    <button type="button" id="opt2" class="opt">Option 2</button>
+                    <button type="button" id="opt3" class="opt">Option 3</button>
                 </div>
             </main>
             
-            <div class="navigate">
-                <button type="button" id="nxt">
+            <div class="navigate" id="navigate">
+                <button type="button" id="prev">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +60,7 @@
                     stroke="#292D32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
-            <button type="button" id="prev">
+            <button type="button" id="nxt">
                 <?xml version="1.0" encoding="utf-8"?>
                 <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -65,14 +72,16 @@
     </div>
     
     <footer>
-        <div class="foot">
-            <button type="reset" id="resetlevel">Reset Level</button>
-            <button type="submit" id="submit">Submit</button>
+        <div id="foot">
+            <div class="foot">
+                <button type="reset" id="resetopt">Reset Selection</button>
+                <button type="reset" id="check">Check Answer</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>   
         </div>        
     </footer>
 </div>
 </div>
-
 
 <script src="/Front-end-Mini-Projects/Quiz/Quiz.js"></script>
 
