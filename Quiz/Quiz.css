@@ -111,8 +111,28 @@ button:active{
     color: #FFF8C9;
 }
 
+#prev{
+    background: #FFC5C5;
+}
+
+#nxt{
+    background: #89B9AD;
+}
+
 #check{
     display: none;
+    color: #1C0A00;
+    background: linear-gradient(45deg, #F1EB90, #E8F3D6);
+}
+
+#check:hover{
+    background: linear-gradient(45deg, #C8DBBE, #F1A661);
+}
+
+#check:disabled{
+    background: #DDF2FD;
+    transform: scale(0.9);
+    color: #6499E9;
 }
 
 #submit{
@@ -125,9 +145,14 @@ button:active{
     color: #E74646;
 }
 
-#resetlevel:hover{
-    background: #279EFF;
-    color: #BDCDD6;
+#resetopt{
+    background: #F5CCA0;
+    color: #000000;
+}
+
+#resetopt:hover{
+    background: #F39F5A;
+    color: #451952;
 }
 
 .container h1{

@@ -310,7 +310,7 @@ function revisited() {
     if (visit.includes(index)) {
         check.style.display = "block";
         check.innerHTML = "Answered";
-        check.disabled = true;
+        check.disabled = true;        
     } else {
         check.innerHTML = "Check Answer";
         check.disabled = false;
