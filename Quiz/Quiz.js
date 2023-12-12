@@ -271,7 +271,8 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
-//Check Answer
+//Check Answer and Counting Attempted Questions
+let visitCount = 0;
 check.addEventListener('click', checkanswer);
 let visit = [null];
 function checkanswer(e) {
@@ -302,7 +303,8 @@ function checkanswer(e) {
         
     }
     visit += index;
-    attempt.innerHTML = Number(visit[visit.length - 1]) + 1;
+    visitCount += 1;
+    attempt.innerHTML = visitCount;
 };
 
 //stopping the user to reanswer the same question by hiding chack answer button
@@ -327,6 +329,7 @@ function submitquiz() {
     document.getElementById("scoreboard").style.display = "block";
     document.getElementById("scoreVal").textContent = score;
     document.getElementById("difficulty").textContent = "Level: " + level.toUpperCase();
+    document.getElementById("attempted").textContent = visitCount;
     document.getElementById("navigate").style.display = "none";
     document.getElementById("foot").style.display = "none";
     if (score == 5) {
@@ -356,12 +359,14 @@ quit.addEventListener('click', () => {
     score = 0;
     index = 0;
     level = null;
-    visit = [null]
+    visit = [null];
+    visitCount = 0;
     resetOptions();
     start.style.display = "block";
     start.style.width = "95px";
     quit.style.display = "none";
     document.getElementById("scoreVal").textContent = score;
+    document.getElementById("attempted").textContent = "--";
     document.getElementById("foot").style.display = "none";
     document.getElementById("mainQuiz").style.display = "none";
     document.getElementById("navigate").style.display = "none";
