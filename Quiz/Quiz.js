@@ -189,6 +189,7 @@ function selectLevel(event) {
 };
 
 function showquest(level) {
+    check.style.display = "none";
     revisited();
     if (index >= 5) {
         submitquiz();
@@ -239,18 +240,21 @@ function selectAnswer(e) {
             e.stopPropagation();
             if (c.className.indexOf('selected') === -1) {
                 if (selected) {
+                    check.style.display = "none";
                     selected.className = selected.className.replace(/\s?selected/, '');
                 };
                 selected = c;
                 selected.className += ' selected';
                 check.style.display = "block";
             } else {
+                check.style.display = "none";
                 c.className = c.className.replace(/\s?selected/, '');
             }
         }
     };
     document.getElementById("resetopt").onclick = function (e) {
         selected.className = selected.className.replace(/\s?selected/, '');
+        check.style.display = "none";
         selected = false;
     };
 };
