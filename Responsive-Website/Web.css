@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+body {
+    background: #191919;
+}
+
+header {
+    padding: 5px 20px 5px 20px;
+}
+
+.sidebarMenu {
+    display: none;
+}
+
+header nav {
+    top: 40px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    position: fixed;
+    right: 50px;
+}
+
+header nav ul {
+    position: fixed;
+}
+
+header nav a, .menu a {
+    text-decoration: none;
+    color: #ECDBBA;
+    font-family: 'Dosis';
+    font-size: 25px;
+    padding: 0;
+}
+
+header nav ul a, .menu ul a {
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover, .menu a:hover {
+    color: #3EC70B;
+}
+
+header nav ul, .menu ul {
+    list-style: none;
+}
+
+header nav ul {
+    margin-left: 0;
+    padding: 0 45px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    padding: 0 10px 0 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+header nav li:active, .menu li:active {
+    transform: scale(0.95);
+}
+
+.translatePage a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav a svg path, .menu svg path {
+    fill: #ECDBBA;
+}
+
+.joinus {
+    border: 1px solid #ECDBBA;
+    border-radius: 10px;
+}
+
+.joinus:hover {
+    background-color: #f3edc81b;
+}
+
+.navbarBtn{
+    position: absolute;
+    left: 100px;
+}
+
+.navbarBtn .barBtnLabel {
+    position: fixed;
+    z-index: 3;
+    left: 180px;
+}
+
+.barBtnInput {
+    display: none;
+}
+
+.hambugerBars {
+    padding: 10px;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    text-transform: none;
+    border: 0;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.hambugerBox--squeeze {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.hambugerBox--squeeze .hamburgerBtn,
+.hambugerBox--squeeze .hamburgerBtn:before,
+.hambugerBox--squeeze .hamburgerBtn:after {
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    border-radius: 4px;
+    background-color: #ECDBBA;
+    transition-duration: 75ms;
+    transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+}
+
+.hambugerBox--squeeze .hamburgerBtn {
+    display: block;
+    top: 50%;
+}
+
+.hambugerBox--squeeze .hamburgerBtn::before,
+.hambugerBox--squeeze .hamburgerBtn::after {
+    content: "";
+    display: block;
+}
+
+.hambugerBox--squeeze .hamburgerBtn::before {
+    top: -10px;
+    transition: top 75ms ease 0.12s, opacity 75ms ease;
+}
+
+.hambugerBox--squeeze .hamburgerBtn::after {
+    content: "";
+    top: 10px;
+    transition: top 75ms ease 0.12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
+}
+
+.is-active .hambugerBox--squeeze .hamburgerBtn {
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+    transform: rotate(45deg);
+}
+
+.is-active .hambugerBox--squeeze .hamburgerBtn::before {
+    top: 0;
+    transition: top 75ms ease, opacity 75ms ease 0.12s;
+    opacity: 0;
+}
+
+.is-active .hambugerBox--squeeze .hamburgerBtn::after {
+    top: 0;
+    transition: top 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) 0.12s;
+    transform: rotate(-90deg);
+}
+
+.menu{
+    z-index: 2;
+    position: absolute;
+    left: -350px;
+    height: max-content;
+    width: 250px;
+    background-color: cadetblue;
+    top: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu .menuOpt{
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    line-height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-active .menu{
+    left: -100px;
+}
+
+.content {
+    position: absolute;
+    top: 150px;
+    padding-left: 30px;
+    font-size: 40px;
+    font-family: 'Dosis';
+    color: #ECDBBA;
+}
+
+
+.content form .serviceInpLab {
+    height: 70px;
+    display: grid;
+    grid-template-columns: repeat(1, 75% 2fr) 3px;
+    background-color: rgba(222, 184, 135, 0.274);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.content form .serviceInpLab:hover {
+    background-color: rgba(222, 184, 135, 0.421);
+}
+
+.content form .serviceInpLab input {
+    background: transparent;
+    font-family: 'Dosis';
+    color: #ECDBBA;
+    letter-spacing: 1px;
+    font-size: 25px;
+    padding-left: 15px;
+    height: 100%;
+    border: 0;
+    outline: none;
+}
+
+.content form .serviceInpLab input::placeholder {
+    font-family: inherit;
+    font-size: 25px;
+    letter-spacing: normal;
+    padding-left: 15px;
+}
+
+.content form .serviceInpLab label {
+    display: flex;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    justify-content: center;
+}
+
+.content form .serviceInpLab label:active {
+    transform: scale(0.9);
+}
+
+.searchTextSpan {
+    text-align: center;
+}
+
+.searchText {
+    text-align: center;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.51);
+    padding: 3px 8px 4px 8px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+.searchIconSpan {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .is-active::before {
+        content: "";
+        z-index: 2;
+        backdrop-filter: blur(5px);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+
+    .optList {
+        display: none;
+    }
+
+    .sidebarMenu{
+        display: block;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    .contentHead {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbarBtn .barBtnLabel {
+        left: 10px;
+    }
+
+    .searchTextSpan {
+        display: none;
+    }
+
+    .searchIconSpan {
+        display: block;
+    }
+
+    .content form .serviceInpLab {
+    grid-template-columns: repeat(1, 75% 2fr) 3px;
+    }
+}
