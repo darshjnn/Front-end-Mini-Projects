@@ -47,6 +47,10 @@ header nav ul li a:hover, .menu a:hover {
     color: #3EC70B;
 }
 
+header nav ul li a:hover span svg path, .menu a:hover span svg path {
+    fill: #3EC70B;
+}
+
 header nav ul, .menu ul {
     list-style: none;
 }
@@ -74,8 +78,14 @@ header nav li:active, .menu li:active {
     align-items: center;
 }
 
+.translatePage a span {
+    display: flex;
+    align-items: center;
+}
+
 header nav a svg path, .menu svg path {
     fill: #ECDBBA;
+    transition: all 0.3s ease-in-out;
 }
 
 .joinus {
@@ -180,6 +190,7 @@ header nav a svg path, .menu svg path {
     height: max-content;
     width: 250px;
     background-color: cadetblue;
+    border-radius: 10px 35px 35px 0px;
     top: 100px;
     transition: all 0.3s ease-in-out;
 }
