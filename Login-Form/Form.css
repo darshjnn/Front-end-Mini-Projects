@@ -1,65 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-body{
-    overflow: scroll;
-    font-family: 'Josefin Sans', sans-serif;
-    padding: 0;
-    margin: 0;
-    background: #232D3F;
-    position: fixed;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root {
+    --font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background: #2C3333;
     color: #F9F9E0;
 }
 
-section::before{
+.mainSect {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    perspective: 2000px;
+    height: max-content;
+}
+
+.container::before {
     content: "";
-    -webkit-clip-path: polygon(53% 0, 0 68%, 100% 100%);
     clip-path: polygon(53% 0, 0 68%, 100% 100%);
-    position: absolute;
+    clip-path: polygon(53% 0, 0 68%, 100% 100%);
+    position: fixed;
     height: 150px;
     width: 150px;
     border: 1px solid black;
-    transform: translate(150px, 400px);
+    transform: translate(50%, 100%);
     background-color: cadetblue;
     opacity: 0.7;
 }
 
-section{
-    width: 70%;
-}
-
-.form{
-    background: linear-gradient(135deg, #232d3f86, #a0c49d50);
-    margin: 270px auto;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    min-height: 550px;
-    max-width: 400px;
-    min-width: 200px;
-    overflow: hidden;
-    padding: 5px 15px;
-    border: 2px solid #526D82;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.473);
+.container {
+    width: 400px;
+    transform-style: preserve-3d;
     border-radius: 15px;
-    backdrop-filter: blur(5px);
+    transition: all 1s ease-in-out;
 }
 
-.form h1{
+.hoverFunctionDiv {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hoverFunctionDiv .hoverFunction {
+    font-weight: 500;
+    display: inline-flex;
+    position: relative;
+    color: #FF6666;
+    user-select: none;
+    background: #363636;
+    border: 1px solid black;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.hoverFunction div {
+    position: relative;
+    z-index: 1;
+}
+
+.hoverFunction::before {
+    content: '';
+    background: #000;
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out;
+}
+
+.hoverFunction:hover::before {
+    position: absolute;
+    height: 150px;
+    width: 300px;
+}
+
+.passwordEye {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.showPassword {
+    z-index: -1;
+    height: 35px;
+    width: 2px;
+    border-radius: 30px;
+    background: #618264;
+    position: absolute;
+    right: 25px;
+    bottom: 3px;
+    transform: rotate(-45deg);
+}
+
+/* Front Face */
+.form {
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.473);
+    background: linear-gradient(135deg, #232d3f86, #a0c49d5c);
+    border: 2px solid #526D82;
+    padding: 5px 15px;
+    backface-visibility: hidden;
+}
+
+.form .formHead {
+    font-size: 1.65rem;
     text-align: center;
 }
 
-.form a{
+.form a {
     text-decoration: none;
+    color: #B6EADA;
 }
 
-.detail{
+.detail {
     position: relative;
     padding: 5px;
     display: flex;
@@ -67,37 +133,44 @@ section{
     justify-content: space-around;
 }
 
-fieldset{
+fieldset {
     position: relative;
     border: none;
     border-bottom: 1px solid #EEEEEE;
     margin-bottom: 30px;
     border-radius: 10px;
+    font-size: 1rem;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.421);
 }
 
-.fieldpsw{
+.fieldpsw {
     margin-bottom: 8px;
 }
 
-.fieldcreateacc{
+.fieldcreateacc {
     border: none;
 }
 
-.forgot a{
-    float: right;
+#forgot {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.info{
+#forgotAnchor {
+    width: max-content;
+    height: max-content;
+    padding: 8px 15px;
+}
+
+.info {
     display: flex;
     align-items: flex-end;
-    padding: 10px;
+    justify-content: space-between;
 }
 
-.info input{
-    bottom: 0px;
-    font-size: 20px;
-    font-family: inherit;
+.container input {
+    font-size: 1.1rem;
+    font-family: var(--font-family);
     color: bisque;
     position: relative;
     left: 25px;
@@ -105,91 +178,254 @@ fieldset{
     border: none;
     outline: none;
     width: 90%;
+    padding-top: 5px;
+    margin-left: 5px;
 }
 
-.info input:focus~label,
-.info input:valid ~label{
-    position: absolute;
-    bottom: 75%;
-    font-size: 14px;
-    transform-style: preserve-3d;
+.container input[type="date"] {
+    background: none;
 }
 
-.info input:focus~img{
-    transform: scale(1.5);
+.container input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url(/Front-end-Mini-Projects/Login-Form/SVG/calendar-svgrepo-com.svg);
 }
 
-.info label{
+.container input::-ms-reveal,
+.container input::-ms-clear {
+    display: none;
+}
+
+.container input::placeholder {
+    opacity: 0;
+}
+
+.container label {
     position: absolute;
     font-size: 1.2rem;
     bottom: 8px;
     height: min-content;
     transition: all 0.3s ease-in-out;
     transform-origin: left top;
-    width: 90%;
-    left: 13px;
+    width: 100%;
+    left: 20px;
     pointer-events: none;
 }
 
-.info span{
+.container input:focus~label,
+.container input:valid~label,
+.container input:focus~svg path,
+.container input:focus~svg circle {
+    position: absolute;
+    bottom: 75%;
+    font-size: 1rem;
+    transform-style: preserve-3d;
+    fill: #c6964960;
+    color: #B6EADA;
+}
+
+.container input:focus~svg {
+    transform: scale(1.2);
+}
+
+.container span {
     position: relative;
     left: 23px;
 }
 
-.info img{
+.container svg {
     position: absolute;
+    bottom: 5px;
+    left: 9px;
     padding: 3px;
-    padding-right: 8px;
     transition: all 0.3s ease-in-out;
 }
 
-.loginbtn{
-    width: 100%;
+.logInBtnDiv {
     padding: 25px 0 25px 0;
-    display: flex;
-    justify-content: center;
+    font-size: 30px;
 }
 
-.loginbtn button{
-    width: 80%;
-    height: 40px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
-    border-radius: 15px;
-    border: none;
-}
-
-.fieldsignup legend{
+.fieldsignup legend {
     text-align: center;
 }
 
-.fieldsignup{
+.fieldsignup {
     display: flex;
     justify-content: space-evenly;
     padding-top: 15px;
 }
 
-.fieldsignup a img{
+.fieldsignup a img {
     opacity: 0.7;
     transition: all 0.3s ease-in-out;
 }
 
-.fieldsignup a img:hover{
+.fieldsignup a img:hover {
     opacity: 1;
     transform: scale(1.2);
 }
 
-.fieldcreateacc{
+.fieldcreateacc {
     display: flex;
     justify-content: center;
 }
 
-.fieldcreateacc legend{
+.fieldcreateacc legend {
     text-align: center;
 }
 
-.fielduser{
+.fielduser {
     position: relative;
 }
 
+#createaccSection {
+    font-size: 25px;
+}
 
+
+/* Back Face */
+.createaccSection {
+    transform: rotateY(180deg);
+    position: relative;
+    right: 35px;
+    width: 100%;
+}
+
+.container #DOBresetBtn {
+    display: block;
+    position: absolute;
+    width: max-content;
+    top: 0;
+    right: 55px;
+    height: 100%;
+}
+
+#warnWrongMail {
+    position: relative;
+    padding: 5px 0;
+    border-radius: 10px;
+    top: -25px;
+    background: #3d3b408a;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    font-size: 1.4rem;
+    color: #EF4040;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.421);
+    overflow-wrap: break-word;
+}
+
+#userPswInp,
+#password {
+    width: 80%;
+}
+
+#copyBtn {
+    position: absolute;
+    right: 50px;
+    bottom: 3px;
+}
+
+.pswStr:hover::before,
+.accountBtn:hover::before,
+.btnType:hover::before {
+    width: 500px;
+}
+
+#pswStr {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    padding: 3px 25px;
+    display: grid;
+    justify-items: center;
+    row-gap: 5px;
+}
+
+.pswStrText {
+    display: flex;
+    flex-direction: row;
+}
+
+.pswStr span {
+    position: relative;
+    left: 5px;
+}
+
+#pswStrBar {
+    height: 5px;
+    width: 100%;
+    background: #F9F9E0;
+    border-radius: 30px;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnType {
+    font-family: var(--font-family);
+    width: 100%;
+    height: max-content;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnType div,
+.pswStr div {
+    z-index: 2;
+}
+
+.createAccBtn {
+    padding: 0 0 15px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeCreateAcc,
+#createaccAnchor {
+    width: max-content;
+    height: max-content;
+}
+
+.accountBtn div {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .mainSect {
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        width: 350px;
+    }
+
+    .createAccBtn {
+        display: grid;
+        justify-content: center;
+        grid-row-gap: 5px;
+        grid-template-columns: repeat(1, 70%);
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        width: 300px;
+    }
+
+    .hoverFunctionDiv {
+        overflow-wrap: break-word;
+        text-align: center;
+    }
+}
