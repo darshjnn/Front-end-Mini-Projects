@@ -195,7 +195,7 @@ function showquest(level) {
         submitquiz();
     } else {
         quesnum.innerHTML = index + 1;
-        
+
         if (level === "easy") {
             question.innerHTML = allquestion[0].easy[index].question;
             resetOptions();
@@ -219,7 +219,7 @@ function showquest(level) {
     selectAnswer();
 }
 
-//create button elements for options
+// Create button elements for options
 function createbtn(answer) {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
@@ -231,7 +231,7 @@ function createbtn(answer) {
     };
 };
 
-//Apply Design on selecting an option
+// Apply Design on selecting an option
 function selectAnswer(e) {
     var selected;
     answerBtn.onclick = function (e) {
@@ -259,7 +259,7 @@ function selectAnswer(e) {
     };
 };
 
-//Next Question
+// Next Question
 nxtBtn.addEventListener('click', () => {
     if (index < 4) {
         index += 1;
@@ -267,7 +267,7 @@ nxtBtn.addEventListener('click', () => {
     }
 });
 
-//Previos Question
+// Previos Question
 prevBtn.addEventListener('click', () => {
     if (index > 0) {
         index -= 1;
@@ -275,7 +275,7 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
-//Check Answer and Counting Attempted Questions
+// Check Answer and Counting Attempted Questions
 let visitCount = 0;
 check.addEventListener('click', checkanswer);
 let visit = [null];
@@ -304,26 +304,26 @@ function checkanswer(e) {
                 node[i].style.color = "rgb(9, 38, 53)";
             }
         }
-        
+
     }
     visit += index;
     visitCount += 1;
     attempt.innerHTML = visitCount;
 };
 
-//stopping the user to reanswer the same question by hiding chack answer button
+// Stopping the user to reanswer the same question by hiding check answer button
 function revisited() {
     if (visit.includes(index)) {
         check.style.display = "block";
         check.innerHTML = "Answered";
-        check.disabled = true;        
+        check.disabled = true;
     } else {
         check.innerHTML = "Check Answer";
         check.disabled = false;
     }
 }
 
-//Submit
+// Submit
 submit.addEventListener('click', submitquiz);
 
 function submitquiz() {
@@ -341,20 +341,20 @@ function submitquiz() {
     } else if (score == 3 || score == 4) {
         mssg.innerHTML = "KADAK HAI!!!";
     } else if (score == 2) {
-        mssg.innerHTML = "150 RUPIYA DEGA!!!";  
+        mssg.innerHTML = "150 RUPIYA DEGA!!!";
     } else {
         mssg.innerHTML = "PADDAII LIKHAII KARO YRR!!!";
     }
 };
 
-//Reset Options
+// Reset Options
 function resetOptions() {
     while (answerBtn.firstChild) {
         answerBtn.removeChild(answerBtn.firstChild);
     }
 };
 
-//Quit
+// Quit
 quit.addEventListener('click', () => {
     start.innerHTML = "Start";
     attempt.innerHTML = "-- ";
