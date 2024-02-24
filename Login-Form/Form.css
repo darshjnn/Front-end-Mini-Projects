@@ -1,431 +1,499 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    --font-family: 'Quicksand', sans-serif;
+	--font-family: 'Quicksand', sans-serif;
 }
 
+/* 
+	*,
+	*::after,
+	*::before {
+	box-sizing: border-box;
+} 
+*/
+
 body {
-    font-family: var(--font-family);
-    background: #2C3333;
-    color: #F9F9E0;
+	font-family: var(--font-family);
+	background: #2C3333;
+	color: #F9F9E0;
 }
 
 .mainSect {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    perspective: 2000px;
-    height: max-content;
+	display: grid;
+	place-items: center;
+	perspective: 2000px;
+	height: max-content;
 }
 
 .container::before {
-    content: "";
-    clip-path: polygon(53% 0, 0 68%, 100% 100%);
-    clip-path: polygon(53% 0, 0 68%, 100% 100%);
-    position: fixed;
-    height: 150px;
-    width: 150px;
-    border: 1px solid black;
-    transform: translate(50%, 100%);
-    background-color: cadetblue;
-    opacity: 0.7;
+	content: "";
+	clip-path: polygon(53% 0, 0 68%, 100% 100%);
+	position: fixed;
+	height: 150px;
+	width: 150px;
+	border: 1px solid black;
+	transform: translate(50%, 100%);
+	background-color: cadetblue;
+	opacity: 0.7;
 }
 
 .container {
-    width: 400px;
-    transform-style: preserve-3d;
-    border-radius: 15px;
-    transition: all 1s ease-in-out;
+	width: 400px;
+	transform-style: preserve-3d;
+	border-radius: 15px;
+	transition: all 1s ease-in-out;
 }
 
 .hoverFunctionDiv {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .hoverFunctionDiv .hoverFunction {
-    font-weight: 500;
-    display: inline-flex;
-    position: relative;
-    color: #FF6666;
-    user-select: none;
-    background: #363636;
-    border: 1px solid black;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    overflow: hidden;
-    justify-content: center;
+	cursor: pointer;
+	font-weight: 500;
+	display: inline-flex;
+	position: relative;
+	color: #FF6666;
+	user-select: none;
+	background: #363636;
+	border: 1px solid black;
+	padding: 10px 25px;
+	border-radius: 30px;
+	text-decoration: none;
+	overflow: hidden;
+	justify-content: center;
 }
 
 .hoverFunction div {
-    position: relative;
-    z-index: 1;
+	font: var(--font-family);
+	position: relative;
+	z-index: 1;
 }
 
 .hoverFunction::before {
-    content: '';
-    background: #000;
-    position: absolute;
-    top: var(--y);
-    left: var(--x);
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease-out, height 0.6s ease-out;
+	content: '';
+	background: #000;
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.6s ease-out, height 0.6s ease-out;
 }
 
 .hoverFunction:hover::before {
-    position: absolute;
-    height: 150px;
-    width: 300px;
+	position: absolute;
+	height: 150px;
+	width: 300px;
 }
 
 .passwordEye {
-    position: absolute;
-    right: 10px;
-    bottom: 5px;
+	cursor: pointer;
 }
 
-.showPassword {
-    z-index: -1;
-    height: 35px;
-    width: 2px;
-    border-radius: 30px;
-    background: #618264;
-    position: absolute;
-    right: 25px;
-    bottom: 3px;
-    transform: rotate(-45deg);
+.passwordEyeImg {
+	position: absolute;
+	padding: 0 5px;
+	right: 5px;
+	bottom: 5px;
 }
 
-/* Front Face */
-.form {
-    width: 100%;
-    position: absolute;
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.473);
-    background: linear-gradient(135deg, #232d3f86, #a0c49d5c);
-    border: 2px solid #526D82;
-    padding: 5px 15px;
-    backface-visibility: hidden;
+.passwordEye::before {
+	content: "";
+	z-index: -2;
+	height: 35px;
+	width: 3px;
+	border-radius: 50%;
+	background: red;
+	position: absolute;
+	right: 25px;
+	bottom: 3px;
+	transform: rotate(-45deg);
 }
 
-.form .formHead {
-    font-size: 1.65rem;
-    text-align: center;
+.animateHeight {
+	z-index: -1;
+	background: #2C3333;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 8px;
+	bottom: 3px;
+	/* top: 6px; */
+	transition: height 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.form a {
-    text-decoration: none;
-    color: #B6EADA;
+.passwordEyeHover {
+	z-index: 3;
+	position: absolute;
+	right: 5px;
+	top: 40px;
+	padding: 3px 8px;
+	border-radius: 10px;
+	background: linear-gradient(145deg, #36312e, #403a37);
+	box-shadow: 1px 1px 2px #383330, -1px -1px 2px #403936;
+	transition: opacity 0.2s ease-in;
+	opacity: 0;
 }
 
-.detail {
-    position: relative;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.passwordEye:hover~.passwordEyeHover {
+	opacity: 1;
 }
 
-fieldset {
-    position: relative;
-    border: none;
-    border-bottom: 1px solid #EEEEEE;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    font-size: 1rem;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.421);
-}
-
-.fieldpsw {
-    margin-bottom: 8px;
-}
-
-.fieldcreateacc {
-    border: none;
-}
-
-#forgot {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#forgotAnchor {
-    width: max-content;
-    height: max-content;
-    padding: 8px 15px;
-}
-
-.info {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+.emptyFieldPopup::after {
+	content: "Fill this field.";
+	font-weight: 800;
+	text-align: right;
+	padding: 3px 8px;
+	position: absolute;
+	background: red;
+	border-radius: 5px;
+	border-top-right-radius: 5px;
+	top: 8px;
+	right: 80px;
 }
 
 .container input {
-    font-size: 1.1rem;
-    font-family: var(--font-family);
-    color: bisque;
-    position: relative;
-    left: 25px;
-    background: none;
-    border: none;
-    outline: none;
-    width: 90%;
-    padding-top: 5px;
-    margin-left: 5px;
+	font-size: 1.1rem;
+	font-family: var(--font-family);
+	color: bisque;
+	position: relative;
+	left: 25px;
+	background: none;
+	border: none;
+	outline: none;
+	width: 90%;
+	padding-top: 5px;
+	margin-left: 5px;
 }
 
 .container input[type="date"] {
-    background: none;
+	background: none;
 }
 
 .container input[type="date"]::-webkit-calendar-picker-indicator {
-    background-image: url(/Front-end-Mini-Projects/Login-Form/SVG/calendar-svgrepo-com.svg);
+	background-image: url(/Front-end-Mini-Projects/Login-Form/SVG/calendar-svgrepo-com.svg);
 }
 
 .container input::-ms-reveal,
 .container input::-ms-clear {
-    display: none;
+	display: none;
 }
 
 .container input::placeholder {
-    opacity: 0;
+	opacity: 0;
 }
 
 .container label {
-    position: absolute;
-    font-size: 1.2rem;
-    bottom: 8px;
-    height: min-content;
-    transition: all 0.3s ease-in-out;
-    transform-origin: left top;
-    width: 100%;
-    left: 20px;
-    pointer-events: none;
+	position: absolute;
+	font-size: 1.2rem;
+	bottom: 8px;
+	height: min-content;
+	transition: all 0.3s ease-in-out;
+	transform-origin: left top;
+	width: 100%;
+	left: 20px;
+	pointer-events: none;
 }
 
 .container input:focus~label,
 .container input:valid~label,
 .container input:focus~svg path,
 .container input:focus~svg circle {
-    position: absolute;
-    bottom: 75%;
-    font-size: 1rem;
-    transform-style: preserve-3d;
-    fill: #c6964960;
-    color: #B6EADA;
+	position: absolute;
+	bottom: 75%;
+	font-size: 1rem;
+	transform-style: preserve-3d;
+	stroke: #c69649;
+	color: #B6EADA;
 }
 
 .container input:focus~svg {
-    transform: scale(1.2);
+	transform: scale(1.2);
 }
 
-.container span {
-    position: relative;
-    left: 23px;
+.container .flyingtext span {
+	position: relative;
+	left: 23px;
 }
 
 .container svg {
-    position: absolute;
-    bottom: 5px;
-    left: 9px;
-    padding: 3px;
-    transition: all 0.3s ease-in-out;
+	position: absolute;
+	bottom: 5px;
+	left: 9px;
+	padding: 3px;
+	transition: all 0.3s ease-in-out;
 }
 
-.logInBtnDiv {
-    padding: 25px 0 25px 0;
-    font-size: 30px;
+.form {
+	width: 100%;
+	position: absolute;
+	backdrop-filter: blur(5px);
+	border-radius: 15px;
+	box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.473);
+	border: 2px solid #526D82;
+	padding: 5px 15px;
+	backface-visibility: hidden;
 }
 
-.fieldsignup legend {
-    text-align: center;
+/* Front Face */
+.form .formHead {
+	font-size: 1.65rem;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
-.fieldsignup {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 15px;
+.detail {
+	position: relative;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
-.fieldsignup a img {
-    opacity: 0.7;
-    transition: all 0.3s ease-in-out;
+fieldset {
+	position: relative;
+	border: none;
+	border-bottom: 1px solid #EEEEEE;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	font-size: 1rem;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.421);
 }
 
-.fieldsignup a img:hover {
-    opacity: 1;
-    transform: scale(1.2);
+.fieldpsw {
+	margin-bottom: 15px;
 }
 
 .fieldcreateacc {
-    display: flex;
-    justify-content: center;
+	border: none;
+}
+
+#forgot {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#forgotBtn {
+	width: max-content;
+	height: max-content;
+	padding: 8px 15px;
+}
+
+.logInBtnDiv {
+	padding: 25px 0 25px 0;
+}
+
+#logInBtn {
+	font-size: 1.8rem;
+}
+
+.fieldsignup legend {
+	text-align: center;
+}
+
+.fieldsignup {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 15px;
+}
+
+.fieldsignup a img {
+	opacity: 0.7;
+	transition: all 0.3s ease-in-out;
+}
+
+.fieldsignup a img:hover {
+	opacity: 1;
+	transform: scale(1.2);
+}
+
+.fieldcreateacc {
+	display: flex;
+	justify-content: center;
 }
 
 .fieldcreateacc legend {
-    text-align: center;
+	text-align: center;
 }
 
 .fielduser {
-    position: relative;
+	position: relative;
 }
 
 #createaccSection {
-    font-size: 25px;
+	font-size: 25px;
 }
 
 
 /* Back Face */
 .createaccSection {
-    transform: rotateY(180deg);
-    position: relative;
-    right: 35px;
-    width: 100%;
+	transform: rotateY(180deg);
+	position: relative;
+	right: 35px;
+	width: 100%;
 }
 
-.container #DOBresetBtn {
-    display: block;
-    position: absolute;
-    width: max-content;
-    top: 0;
-    right: 55px;
-    height: 100%;
+.createaccSection fieldset {
+	margin-bottom: 20px;
 }
 
-#warnWrongMail {
-    position: relative;
-    padding: 5px 0;
-    border-radius: 10px;
-    top: -25px;
-    background: #3d3b408a;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    font-size: 1.4rem;
-    color: #EF4040;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.421);
-    overflow-wrap: break-word;
+.invalidFieldPopup::after {
+	content: "Invalid Data.";
+	font-weight: 800;
+	text-align: right;
+	padding: 3px 8px;
+	position: absolute;
+	background: red;
+	border-radius: 5px;
+	border-top-right-radius: 5px;
+	top: 8px;
+	right: 80px;
 }
 
 #userPswInp,
 #password {
-    width: 80%;
+	width: 80%;
 }
 
 #copyBtn {
-    position: absolute;
-    right: 50px;
-    bottom: 3px;
+	position: absolute;
+	right: 45px;
+	bottom: 3px;
+	padding: 0 5px;
+}
+
+.copyBtnHover {
+	position: absolute;
+	z-index: 2;
+	right: 40px;
+	top: 40px;
+	border-radius: 10px;
+	background: linear-gradient(145deg, #8b3636, #a54040);
+	box-shadow: 1px 1px 3px #923939,
+	-1px -1px 3px #a23f3f;
+	padding: 3px 8px;
+	transition: opacity 0.2s ease-in;
+	opacity: 0;
+}
+
+.copiedBtnHover {
+	background: linear-gradient(145deg, #596a56, #6a7e67);
+	box-shadow: 1px 1px 2px #5d6f5a,
+	-1px -1px 2px #697d66;
+	
+}
+
+#copyBtn:hover~.copyBtnHover {
+	opacity: 1;
 }
 
 .pswStr:hover::before,
 .accountBtn:hover::before,
 .btnType:hover::before {
-    width: 500px;
+	width: 500px;
 }
 
 #pswStr {
-    cursor: pointer;
-    text-align: center;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    padding: 3px 25px;
-    display: grid;
-    justify-items: center;
-    row-gap: 5px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.1rem;
+	border-radius: 30px;
+	padding: 3px 25px;
+	display: grid;
+	justify-items: center;
+	row-gap: 5px;
 }
 
 .pswStrText {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .pswStr span {
-    position: relative;
-    left: 5px;
+	position: relative;
+	left: 5px;
 }
 
 #pswStrBar {
-    height: 5px;
-    width: 100%;
-    background: #F9F9E0;
-    border-radius: 30px;
-    border: 1px solid black;
-    transition: all 0.3s ease-in-out;
+	height: 5px;
+	width: 100%;
+	background: #F9F9E0;
+	border-radius: 30px;
+	border: 1px solid black;
+	transition: all 0.3s ease-in-out;
 }
 
 .btnType {
-    font-family: var(--font-family);
-    width: 100%;
-    height: max-content;
-    font-size: 1rem;
-    text-align: center;
-    cursor: pointer;
+	font-family: var(--font-family);
+	width: 100%;
+	height: max-content;
+	font-size: 1rem;
+	text-align: center;
+	cursor: pointer;
 }
 
 .btnType div,
 .pswStr div {
-    z-index: 2;
+	z-index: 2;
 }
 
 .createAccBtn {
-    padding: 0 0 15px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-row-gap: 5px;
-    grid-column-gap: 5px;
-    justify-content: center;
-    align-items: center;
+	padding: 0 0 15px 0;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-row-gap: 5px;
+	grid-column-gap: 5px;
+	justify-content: center;
+	align-items: center;
 }
 
 #closeCreateAcc,
 #createaccAnchor {
-    width: max-content;
-    height: max-content;
+	width: max-content;
+	height: max-content;
 }
 
 .accountBtn div {
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
 }
 
 @media screen and (max-width: 600px) {
-    .mainSect {
-        display: grid;
-        place-items: center;
-    }
-
-    .container {
-        width: 350px;
-    }
-
-    .createAccBtn {
-        display: grid;
-        justify-content: center;
-        grid-row-gap: 5px;
-        grid-template-columns: repeat(1, 70%);
-    }
-
+	.container {
+		width: 350px;
+	}
+	
+	.createAccBtn {
+		display: grid;
+		justify-content: center;
+		grid-row-gap: 5px;
+		grid-template-columns: repeat(1, 70%);
+	}
+	
 }
 
-@media screen and (max-width: 300px) {
-    .container {
-        width: 300px;
-    }
-
-    .hoverFunctionDiv {
-        overflow-wrap: break-word;
-        text-align: center;
-    }
+@media screen and (max-width: 400px) {
+	.container {
+		width: 300px;
+	}
+	
+	.hoverFunctionDiv {
+		overflow-wrap: break-word;
+		text-align: center;
+	}
+	
+	#copyBtn {
+		display: none;
+	}
+	
+	.emptyFieldPopup::after {
+		right: 45px;
+	}
 }
