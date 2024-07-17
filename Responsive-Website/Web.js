@@ -1,7 +1,8 @@
-const hambugerBars = document.getElementById("hambugerBars");
+const navbarBtn = document.getElementById("navbarBtn");
 
 const inputbarBtn = document.getElementById("barBtn");
 
 inputbarBtn.addEventListener('click', () => {
-    hambugerBars.classList.toggle("is-active")
+    console.log(navbarBtn)
+    navbarBtn.classList.toggle("is-active")
 });

@@ -275,3 +275,5 @@ createAccBtn.addEventListener('click', () => {
         console.log("katega")
     }
 });
+
+// Password Strenght Bar
