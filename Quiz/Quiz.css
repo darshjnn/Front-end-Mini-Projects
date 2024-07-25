@@ -15,7 +15,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid black;
     box-shadow: 7px 7px 5px black;
     margin: 50px auto;
     padding: 10px;
