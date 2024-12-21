@@ -88,6 +88,10 @@ section::after {
     width: 120px;
 }
 
+.front .cardDetail .numbLine {
+    letter-spacing: 1px;
+}
+
 .number, .name{
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
