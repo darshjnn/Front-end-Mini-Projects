@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ATG.WORLD</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="shortcut icon" href="./Assets/logo-S2lIhR8K.svg" type="image/x-icon">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+   <header>
+      <div class="container-lg p-3 d-none d-lg-flex col justify-content-between">
+         <a href="#main-page"><img src="./Assets/logo-S2lIhR8K.svg" alt="Logo"></a>
+         <form>
+            <div class="input-group bg-dark-subtle rounded-pill" style="width: 360px;">
+               <form class="d-flex col">
+                  <label class="input-group-text border-0 m-0 pl-2 bg-transparent" for="inputGroupSelect01"
+                     role="button">
+                     <img src="./Assets/search.svg" alt="search">
+                  </label>
+                  <input class="form-control border-0 bg-transparent rounded-pill"
+                     placeholder="Search for your favorite groups in ATG" type="search" id="inputGroupSelect01">
+               </form>
+            </div>
+         </form>
+         <button type="button" class="btn p-1 px-2 fw-bold shadow rounded-pill" id="crtAccBtn" data-bs-toggle="modal"
+            data-bs-target="#createAccModal">
+            Create Account.&nbsp;<span class="text-primary fw-bold">It's Free!</span>
+            <img src="./Assets/down-arrow.svg" alt="down-arrow">
+         </button>
+      </div>
+   </header>
+
+   <!-- Create Account Button for smaller screen-sizes -->
+   <div class="d-lg-none ">
+      <button type="button" class="btn p-1 px-2 fw-bold shadow rounded-pill" id="crtAccPencil" data-bs-toggle="modal"
+         data-bs-target="#createAccModal">
+         <img src="./Assets/bxs-pencil.svg" alt="pencil">
+      </button>
+   </div>
+
+   <!-- Create Account Modal -->
+   <div class="modal fade" id="createAccModal" tabindex="-1" aria-labelledby="createAccModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" id="modal-dialog">
+         <div class="modal-content" id="modal-content">
+            <div class="d-none d-lg-flex modal-header row-12 justify-content-center">
+               <p class="modal-title text-success fw-semibold" id="createAccModalLabel">
+                  Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+               </p>
+            </div>
+            <button type="button" class="btn-close m-0 p-0" id="modalClose" data-bs-dismiss="modal">
+               <img src="./Assets/close.svg" alt="close">
+            </button>
+            <div class="modal-body d-flex col mx-2">
+               <div class="createAcc col-lg-6 col-12" id="createAcc">
+                  <h4 class="fw-bold my-3">Create Account</h4>
+                  <form class=" needs-validation" novalidate>
+                     <div class="row my-2">
+                        <div class="col-6 pe-1">
+                           <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+                              required>
+                           <div class="valid-feedback">
+                              Looks good!
+                           </div>
+                        </div>
+                        <div class="col-6 ps-1">
+                           <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+                              required>
+                           <div class="valid-feedback">
+                              Looks good!
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-12 my-2">
+                        <div class="input-group has-validation">
+                           <input type="text" class="form-control" id="validationEmail" placeholder="E-mail"
+                              aria-describedby="inputGroupPrepend" required>
+                           <div class="invalid-feedback">
+                              Please enter an Email-id.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 my-2">
+                        <input type="password" class="form-control" id="validationCustom03" placeholder="Password"
+                           required>
+                        <div class="invalid-feedback">
+                           Please provide a valid password.
+                        </div>
+                     </div>
+                     <div class="col-12 my-2">
+                        <input type="password" class="form-control" id="validationCustom05"
+                           placeholder="Confirm Password" required>
+                        <div class="invalid-feedback">
+                           Please confirm Password.
+                        </div>
+                     </div>
+                     <div class="col-12 my-2">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                           <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                           </label>
+                           <div class="invalid-feedback my-2">
+                              You must agree before submitting.
+                           </div>
+                        </div>
+                     </div>
+                     <button class="btn btn-primary col-6 col-lg-12 rounded-pill my-2" type="submit">
+                        Create Account
+                     </button>
+                     <button type="button" class="d-lg-none signInBtn btn col-5" id="signInBtnMd">
+                        <div class="d-flex col gap-2 justify-content-end">
+                           <span class="d-none d-md-flex">Already have an account? </span>
+                           <span class="text-primary">Sign in</span>
+                        </div>
+                     </button>
+                     <button type="button" class="btn col-12 my-2 border border-1" id="signInFb">
+                        <img src="./Assets/facebook.svg" alt="facebook">
+                        Sign Up with Facebook
+                     </button>
+                     <button type="button" class="btn col-12 my-2 border border-1" id="signInGoogle">
+                        <img src="./Assets/google.svg" alt="google">
+                        Sign Up with Google
+                     </button>
+                  </form>
+               </div>
+
+               <div class="d-none switchSignIn col-12 col-lg-6 mx-2" id="switchSignIn">
+                  <h4 class="fw-bold my-3">Welcome Back</h4>
+                  <form class=" needs-validation" novalidate>
+                     <div class="col-12 my-2">
+                        <div class="input-group has-validation">
+                           <input type="text" class="form-control" id="validationEmailSignIn" placeholder="E-mail"
+                              aria-describedby="inputGroupPrepend" required>
+                           <div class="invalid-feedback">
+                              Please enter an Email-id.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 my-2">
+                        <input type="password" class="form-control" id="validationCustom03SignIn" placeholder="Password"
+                           required>
+                        <div class="invalid-feedback">
+                           Please provide a valid password.
+                        </div>
+                     </div>
+                     <button class="btn btn-primary col-6 col-lg-12 rounded-pill my-2" type="submit">
+                        Sign In
+                     </button>
+                     <button type="button" class="d-lg-none col-5 text-end signInBtn btn" id="createAccBtnMd">
+                        <div class="d-flex col gap-2 justify-content-end">
+                           <span class="d-none d-md-flex">Create Account instead?</span>
+                           <span class="text-primary">Create Account</span>
+                        </div>
+                     </button>
+                     <button type="button" class="btn col-12 my-2 border border-1" id="signInFbSignIn">
+                        <img src="./Assets/facebook.svg" alt="facebook">
+                        Sign Up with Facebook
+                     </button>
+                     <button type="button" class="btn col-12 my-2 border border-1" id="signInGoogleSignIn">
+                        <img src="./Assets/google.svg" alt="google">
+                        Sign Up with Google
+                     </button>
+                  </form>
+               </div>
+
+               <div class="signIn col-6 d-none d-lg-flex row justify-content-end">
+                  <button type="button" class="signInBtn btn col-11" id="signInBtn">
+                     Already have an account? <span class="text-primary">Sign in</span>
+                  </button>
+                  <img src="./Assets/signup.svg" alt="signup" class="signupImg">
+               </div>
+            </div>
+
+            <div class="modal-footer justify-content-center row-12 p-2">
+               <p class="privacyStatement">By signing up, you agree to our
+                  <a href="">Terms & conditions</a>,
+                  <a href="">Privacy policy</a>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <main>
+      <div class="main-bg position-relative d-flex row align-content-between gx-0"
+         style="background: url(./Assets/container-fluid-bg.jpg) center center / cover no-repeat;">
+         <div class="d-lg-none mt-3">
+            <div class="d-flex justify-content-around gx-0">
+               <a class="btn shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                     fill="#e8eaed">
+                     <path d="m330-444 201 201-51 51-288-288 288-288 51 51-201 201h438v72H330Z" />
+                  </svg>
+               </a>
+               <button class="btn text-white border rounded border-0 shadow-lg" id="grpBtn" type="button">
+                  Leave Group
+               </button>
+            </div>
+         </div>
+         <div class="d-lg"></div>
+         <span class=" text-white d-flex row align-items-end ms-4 w-50">
+            <h1>
+               Computer Engineering
+            </h1>
+            <p class="mb-5">
+               142,765 Computer Engineers follow this
+            </p>
+         </span>
+      </div>
+
+      <section class="content-box">
+         <div
+            class="navBarNoBg d-none d-lg-flex justify-content-around align-items-center sticky-top pt-2 m-0 rounded-bottom"
+            id="navBar">
+            <div class="navbar d-flex justify-content-between">
+               <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link active" id="pills-all-posts-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">All Posts (32)</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="pills-article-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Article</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="pills-event-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                        type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Event</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">Education</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <button class="nav-link" id="pills-job-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                        type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Job</button>
+                  </li>
+               </ul>
+            </div>
+            <div class="d-flex align-content-center gap-2">
+               <button class="btn d-flex align-items-center" id="btnStyle" type="button">Write Post
+                  <img src="./Assets/down-arrow.svg" alt="down-arrow">
+               </button>
+               <button class="btn btn-primary d-flex align-items-center" id="grpAction" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                     fill="#ffffff">
+                     <path
+                        d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z" />
+                  </svg>
+                  &nbsp;Join Group
+               </button>
+            </div>
+         </div>
+
+         <hr class="hrStyle container my-0">
+
+         <div class="mt-3 d-flex col justify-content-center gap-5 mx-auto">
+            <div class="posts">
+               <div class="card" style="max-width: 692px;">
+                  <img src="./Assets/nature-rDsfVg8l.jpg" class="card-img-top imagePost" alt="nature">
+                  <div class="card-body">
+                     <h2 class="card-title d-flex col align-items-end gap-2">
+                        <div>
+                           <img src="./Assets/write.png" alt="write" class="cardImg">
+                        </div>
+                        <div>Article</div>
+                     </h2>
+                     <div class="d-flex col justify-content-between">
+                        <h4 class="card-text mb-0">
+                           What if famous brands had regular fonts? Meet RegulaBrands!
+                        </h4>
+                        <div class="btn-group">
+                           <button type="button" class="dropdownDot btn p-0 px-4" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <img src="./Assets/hori-dots.svg" alt="dots">
+                           </button>
+                           <ul class="dropdown-menu">
+                              <li><a class="dropdown-item">View</a></li>
+                              <li><a class="dropdown-item">Edit</a></li>
+                              <li><a class="dropdown-item">Report</a></li>
+                              <li>
+                                 <hr class="dropdown-divider">
+                              </li>
+                              <li>
+                                 <a class="favorite dropdown-item d-flex align-self-center gap-1 like">
+                                    <img src="./Assets/like.svg" alt="like">
+                                    <div>Add to Favorites</div>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <p class="mt-4">
+                        I’ve worked in UX for the better part of a decade. From now on, I plan to rei…
+                     </p>
+                     <div class="d-flex col gap-4 mt-3 me-2 align-content-center justify-content-between">
+                        <div class="d-flex col gap-1 align-self-center">
+                           <img src="./Assets/baburao.jpeg" alt="acc-logo" class="postImg rounded-circle">&nbsp;
+                           <div class="d-flex row justify-content-center">
+                              <span class="d-flex align-self-center">Baburao Apte</span>
+                              <div class="d-lg-none d-flex col align-self-center gap-1">
+                                 <div>
+                                    <img src="./Assets/eye.svg" alt="views">
+                                 </div>
+                                 <div>
+                                    1.4k Views
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="d-lg-none shareBtn d-flex align-self-center rounded border-0 shadow px-3 py-1"
+                           type="button">
+                           <span><img src="./Assets/share.svg" alt="share">&nbsp;</span>
+                           <span class="d-none d-sm-flex">Share</span>
+                        </button>
+                        <div class="d-none d-lg-flex col align-self-center justify-content-end pe-2 gap-4">
+                           <div class="d-flex col align-self-center gap-1 justify-content-end">
+                              <div>
+                                 <img src="./Assets/eye.svg" alt="views">
+                              </div>
+                              <div>
+                                 1.4k Views
+                              </div>
+                           </div>
+                           <button class="shareBtn rounded border-0 shadow px-3 py-1" type="button">
+                              <img src="./Assets/share.svg" alt="share">
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mt-3" style="max-width: 692px;">
+                  <img src="./Assets/wood-SIbopgrg.jpg" class="card-img-top imagePost" alt="nature">
+                  <div class="card-body">
+                     <h2 class="card-title d-flex col align-items-end gap-2">
+                        <div>
+                           <img src="./Assets/microscope.png" alt="microscope" class="cardImg">
+                        </div>
+                        <div>Education</div>
+                     </h2>
+                     <div class="d-flex col justify-content-between">
+                        <h4 class="card-text mb-0">
+                           Tax Benefits for Investment under National Pension Scheme launched by Government
+                        </h4>
+                        <div class="btn-group">
+                           <button type="button" class="dropdownDot btn p-0 px-4" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <img src="./Assets/hori-dots.svg" alt="dots">
+                           </button>
+                           <ul class="dropdown-menu">
+                              <li><a class="dropdown-item">View</a></li>
+                              <li><a class="dropdown-item">Edit</a></li>
+                              <li><a class="dropdown-item">Report</a></li>
+                              <li>
+                                 <hr class="dropdown-divider">
+                              </li>
+                              <li>
+                                 <a class="favorite dropdown-item d-flex align-self-center gap-1 like">
+                                    <img src="./Assets/like.svg" alt="like">
+                                    <div>Add to Favorites</div>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <p class="mt-4">
+                        I’ve worked in UX for the better part of a decade. From now on, I plan to rei…
+                     </p>
+                     <div class="d-flex col gap-4 mt-3 me-2 align-content-center">
+                        <div class="d-flex col gap-1 align-self-center">
+                           <img src="./Assets/raju.jpeg" alt="acc-logo" class="postImg rounded-circle">&nbsp;
+                           <div class="d-flex row justify-content-center">
+                              <span class="d-flex align-self-center">Raju</span>
+                              <div class="d-lg-none d-flex col align-self-center gap-1">
+                                 <div>
+                                    <img src="./Assets/eye.svg" alt="views">
+                                 </div>
+                                 <div>
+                                    1.4k Views
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="d-lg-none shareBtn d-flex align-self-center rounded border-0 shadow px-3 py-1"
+                           type="button">
+                           <span><img src="./Assets/share.svg" alt="share">&nbsp;</span>
+                           <span class="d-none d-sm-flex">Share</span>
+                        </button>
+                        <div class="d-none d-lg-flex col align-self-center justify-content-end pe-2 gap-4">
+                           <div class="d-flex col align-self-center gap-1 justify-content-end">
+                              <div>
+                                 <img src="./Assets/eye.svg" alt="views">
+                              </div>
+                              <div>
+                                 1.4k Views
+                              </div>
+                           </div>
+                           <button class="shareBtn rounded border-0 shadow px-3 py-1" type="button">
+                              <img src="./Assets/share.svg" alt="share">
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card mt-3" style="max-width: 692px;">
+                  <img src="./Assets/car-kZ9O3U5Q.jpg" class="card-img-top imagePost" alt="nature">
+                  <div class="card-body">
+                     <h2 class="card-title d-flex col align-items-end gap-2">
+                        <div>
+                           <img src="./Assets/calendar.png" alt="calendar" class="cardImg">
+                        </div>
+                        <div>Meetup</div>
+                     </h2>
+                     <div class="d-flex col justify-content-between">
+                        <h4 class="card-text mb-0">
+                           Finance & Investment Elite Social Mixer @Lujiazui
+                        </h4>
+                        <div class="btn-group">
+                           <button type="button" class="dropdownDot btn p-0 px-4" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <img src="./Assets/hori-dots.svg" alt="dots">
+                           </button>
+                           <ul class="dropdown-menu">
+                              <li><a class="dropdown-item">View</a></li>
+                              <li><a class="dropdown-item">Edit</a></li>
+                              <li><a class="dropdown-item">Report</a></li>
+                              <li>
+                                 <hr class="dropdown-divider">
+                              </li>
+                              <li>
+                                 <a class="favorite dropdown-item d-flex align-self-center gap-1 like">
+                                    <img src="./Assets/like.svg" alt="like">
+                                    <div>Add to Favorites</div>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="mt-4 d-flex col gap-5">
+                        <div class="d-flex align-self-center gap-1">
+                           <img src="./Assets/calendar.svg" alt="calendar">
+                           Fri, 12 Oct, 2018
+                        </div>
+                        <div class="d-flex align-self-center gap-1">
+                           <img src="./Assets/location.svg" alt="location">
+                           Ahmedabad, India
+                        </div>
+                     </div>
+                     <div class="d-grid gap-2 mt-4">
+                        <button class="btn fw-bold" type="button" id="vistPostBtn">
+                           Visit Website
+                        </button>
+                     </div>
+                     <div class="d-flex col gap-4 mt-3 me-2 align-content-center">
+                        <div class="d-flex col gap-1 align-self-center">
+                           <img src="./Assets/ghanshyam.jpeg" alt="acc-logo" class="postImg rounded-circle">&nbsp;
+                           <div class="d-flex row justify-content-center">
+                              <span class="d-flex align-self-center">Ghanshyam</span>
+                              <div class="d-lg-none d-flex col align-self-center gap-1">
+                                 <div>
+                                    <img src="./Assets/eye.svg" alt="views">
+                                 </div>
+                                 <div>
+                                    1.4k Views
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="d-lg-none shareBtn d-flex align-self-center rounded border-0 shadow px-3 py-1"
+                           type="button">
+                           <span><img src="./Assets/share.svg" alt="share">&nbsp;</span>
+                           <span class="d-none d-sm-flex">Share</span>
+                        </button>
+                        <div class="d-none d-lg-flex col align-self-center justify-content-end pe-2 gap-4">
+                           <div class="d-flex col align-self-center gap-1 justify-content-end">
+                              <div>
+                                 <img src="./Assets/eye.svg" alt="views">
+                              </div>
+                              <div>
+                                 1.4k Views
+                              </div>
+                           </div>
+                           <button class="shareBtn rounded border-0 shadow px-3 py-1" type="button">
+                              <img src="./Assets/share.svg" alt="share">
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card my-3" style="max-width: 692px;">
+                  <div class="card-body">
+                     <h2 class="card-title d-flex col align-items-end gap-2">
+                        <div>
+                           <img src="./Assets/briefcase.png" alt="briefcase" class="cardImg">
+                        </div>
+                        <div>Jobs</div>
+                     </h2>
+                     <div class="d-flex col justify-content-between">
+                        <h4 class="card-text mb-0">
+                           Software Developer
+                        </h4>
+                        <div class="btn-group">
+                           <button type="button" class="dropdownDot btn p-0 px-4" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                              <img src="./Assets/hori-dots.svg" alt="dots">
+                           </button>
+                           <ul class="dropdown-menu">
+                              <li><a class="dropdown-item">View</a></li>
+                              <li><a class="dropdown-item">Edit</a></li>
+                              <li><a class="dropdown-item">Report</a></li>
+                              <li>
+                                 <hr class="dropdown-divider">
+                              </li>
+                              <li>
+                                 <a class="favorite dropdown-item d-flex align-self-center gap-1 like">
+                                    <img src="./Assets/like.svg" alt="like">
+                                    <div>Add to Favorites</div>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="mt-4 d-flex col gap-5">
+                        <div class="d-flex align-self-center gap-1">
+                           <img src="./Assets/work.svg" alt="calendar">
+                           Innovaccer Analytics Private Ltd.
+                        </div>
+                        <div class="d-flex align-self-center gap-1">
+                           <img src="./Assets/location.svg" alt="location">
+                           Noida, India
+                        </div>
+                     </div>
+                     <div class="d-grid gap-2 mt-4">
+                        <button class="btn text-success fw-bold" type="button" id="postBtn">
+                           Apply on Timejobs
+                        </button>
+                     </div>
+                     <div class="d-flex col gap-4 mt-3 me-2 align-content-center">
+                        <div class="d-flex col gap-1 align-self-center">
+                           <img src="./Assets/kachra-seth.jpg" alt="acc-logo" class="postImg rounded-circle">&nbsp;
+                           <div class="d-flex row justify-content-center">
+                              <span class="d-flex align-self-center">Kachra Seth</span>
+                              <div class="d-lg-none d-flex col align-self-center gap-1">
+                                 <div>
+                                    <img src="./Assets/eye.svg" alt="views">
+                                 </div>
+                                 <div>
+                                    1.4k Views
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="d-lg-none shareBtn d-flex align-self-center rounded border-0 shadow px-3 py-1"
+                           type="button">
+                           <span><img src="./Assets/share.svg" alt="share">&nbsp;</span>
+                           <span class="d-none d-sm-flex">Share</span>
+                        </button>
+                        <div class="d-none d-lg-flex col align-self-center justify-content-end pe-2 gap-4">
+                           <div class="d-flex col align-self-center gap-1 justify-content-end">
+                              <div>
+                                 <img src="./Assets/eye.svg" alt="views">
+                              </div>
+                              <div>
+                                 1.4k Views
+                              </div>
+                           </div>
+                           <button class="shareBtn rounded border-0 shadow px-3 py-1" type="button">
+                              <img src="./Assets/share.svg" alt="share">
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="locationInfo d-none d-lg-flex row align-content-start">
+               <div class="d-flex align-content-center mt-4">
+                  <span class="input-group-text bg-transparent border-0 pe-1" id="basic-addon1">
+                     <img src="./Assets/location.svg" alt="location">
+                  </span>
+                  <div class="input-group mb-0">
+                     <input type="text" class="form-control border-0 ps-0" placeholder="Enter Your Location"
+                        aria-label="Username" id="onfocusInp" aria-describedby="basic-addon1">
+                  </div>
+                  <button class="btn bg-transparent" type="button">
+                     <img src="./Assets/edit.svg" alt="location">
+                  </button>
+               </div>
+
+               <hr class="my-1">
+
+               <div class="d-flex col gap-2 mx-auto mt-0">
+                  <span>
+                     <img src="./Assets/info.svg" alt="info">
+                  </span>
+                  <p class="locationInfoText m-0">
+                     Your location will help us serve better and extend a personalised experience.
+                  </p>
+               </div>
+
+               <div class="add-groups mt-5 pt-2 d-flex align-content-center gap-2">
+                  <img src="./Assets/thumb_up.svg" alt="thumb">
+                  <span>
+                     RECOMMENDED GROUPS
+                  </span>
+               </div>
+
+               <div class="accountToFollow mt-3 d-flex row">
+                  <div class="d-flex col gap-4 my-3">
+                     <div class="d-flex col gap-1 align-self-center">
+                        <img src="./Assets/leisure.jpeg" alt="acc-logo" class="accLogo rounded-circle">&nbsp;
+                        <span class="d-flex align-self-center">Leisure</span>
+                     </div>
+                     <div>
+                        <button class="followBtn rounded-pill border-0 shadow px-3 py-2" type="button">
+                           Follow
+                        </button>
+                     </div>
+                  </div>
+
+                  <div class="d-flex col gap-4 my-3">
+                     <div class="d-flex col gap-1 align-self-center">
+                        <img src="./Assets/mba.jpeg" alt="acc-logo" class="accLogo rounded-circle">&nbsp;
+                        <span class="d-flex align-self-center">MBA</span>
+                     </div>
+                     <div>
+                        <button class="followBtn rounded-pill border-0 shadow px-3 py-2" type="button">
+                           Follow
+                        </button>
+                     </div>
+                  </div>
+
+                  <div class="d-flex col gap-4 my-3">
+                     <div class="d-flex col gap-1 align-self-center">
+                        <img src="./Assets/btech.png" alt="acc-logo" class="accLogo rounded-circle">&nbsp;
+                        <span class="d-flex align-self-center">B. Tech.</span>
+                     </div>
+                     <div>
+                        <button class="followBtn rounded-pill border-0 shadow px-3 py-2" type="button">
+                           Follow
+                        </button>
+                     </div>
+                  </div>
+
+                  <div class="d-flex col gap-4 my-3">
+                     <div class="d-flex col gap-1 align-self-center">
+                        <img src="./Assets/tech.jpeg" alt="acc-logo" class="accLogo rounded-circle">&nbsp;
+                        <span class="d-flex align-self-center">Technology</span>
+                     </div>
+                     <div>
+                        <button class="followBtn rounded-pill border-0 shadow px-3 py-2" type="button">
+                           Follow
+                        </button>
+                     </div>
+                  </div>
+
+                  <div class="d-flex col gap-4 my-4">
+                     <button type="button" class="btn text-primary w-100 text-end">
+                        See more..
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <script src="./index.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

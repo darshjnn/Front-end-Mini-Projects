@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200.1000;1,200.1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300.900;1,300.900&display=swap');
+
+
+:root {
+    --Nonito: "Nunito";
+    --leftCol1: #6420AA;
+    --rightCol1: #EEEEEE;
+
+    --leftCol2: #4D26CD;
+    --rightCol2: #1C0C5B;
+
+    --leftCol3: #0e113a;
+    --rightCol3: #151748;
+
+    --leftCol4: #16273b;
+    --rightCol4: #0c131b;
+
+    --leftCol5: #1164e6;
+    --rightCol5: #21cfea;
+
+    --leftCol6: #012c92;
+    --rightCol6: #EEEEEE;
+
+    --leftCol7: #00834d;
+    --rightCol7: #00b669;
+
+    --dotSVG: #378CE7;
+    --pathSVG: #31363F;
+}
+
+.leftCol,
+.rightCol {
+    height: 100vh;
+}

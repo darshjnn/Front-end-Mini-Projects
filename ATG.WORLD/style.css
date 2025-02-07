@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main-bg {
+    height: 440px;
+}
+
+.posts-img {
+    height: 220px;
+}
+
+#grpBtn {
+    background-color: rgba(0, 0, 0, 0.418);
+}
+
+.navBar {
+    background: rgba(0, 0, 0, 0.723);
+    transition: background 0.5s ease-in-out;
+}
+
+.navBarNoBg {
+    transition: background 0.5s ease-in-out;
+}
+
+.hrStyle {
+    max-width: 1040px;
+}
+
+#btnStyle,
+.followBtn,
+.shareBtn {
+    background: rgb(242, 242, 242);
+}
+
+#btnStyle:hover,
+.followBtn:hover,
+.unfollowBtn:hover,
+.shareBtn:hover,
+#crtAccBtn:hover {
+    background-color: rgba(204, 199, 199, 0.719);
+}
+
+
+.unfollowBtn {
+    border: 1px solid rgba(0, 0, 0, 0.702);
+    background: none;
+}
+
+.imagePost {
+    height: 220px;
+}
+
+#onfocusInp:focus,
+.dropdownDot:focus {
+    box-shadow: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border: none;
+}
+
+.locationInfo {
+    max-width: 300px;
+}
+
+.locationInfoText {
+    font-size: 13px;
+    color: #868E96;
+}
+
+.postImg {
+    height: 48px;
+}
+
+.accLogo {
+    height: 36px;
+}
+
+.cardImg {
+    height: 40px;
+}
+
+#postBtn,
+#vistPostBtn {
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    border-radius: 10px;
+}
+
+#postBtn:hover,
+#vistPostBtn:hover,
+#signInBtn:hover,
+#signInFb:hover,
+#signInGoogle:hover,
+#signInFbSignIn:hover,
+#signInGoogleSignIn:hover,
+#signInBtnMd:hover,
+#createAccBtnMd:hover {
+    background: #868e962e;
+}
+
+#vistPostBtn {
+    color: orangered;
+}
+
+#vistPostBtn:active {
+    border: 1px solid orangered;
+    background: rgba(255, 68, 0, 0.195);
+}
+
+#postBtn:active {
+    border: 1px solid green;
+    background: rgba(0, 128, 0, 0.195);
+}
+
+#createAccModalLabel {
+    font-size: 14px;
+}
+
+#modalClose {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.339);
+    border-radius: 50%;
+    background: white;
+    height: 26px;
+    width: 26px;
+    z-index: -1;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+#modalClose:hover {
+    z-index: 2;
+    background: rgba(245, 245, 245, 0.579);
+    border: 1px solid rgba(0, 0, 0, 0.651);
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.signupImg {
+    height: 100%;
+}
+
+.privacyStatement {
+    font-size: 13px;
+}
+
+#crtAccPencil {
+    background: linear-gradient(180deg, #ff5c5c, #f0568a);
+    height: 54px;
+    width: 54px;
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+    .main-bg {
+        height: 236px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 991.98px) { 
+    #modalClose {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 2;
+    }
+
+    #modal-content {
+        position: absolute;
+        bottom: -28px;
+        width: 100vw;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    #modal-dialog {
+        padding-bottom: 0;
+        margin: 0;
+        bottom: -28px;
+    }
+}

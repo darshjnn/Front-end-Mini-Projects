@@ -4,7 +4,7 @@ const list = document.getElementById("taskList");
 
 function addTask() {
     if (inputText.value === ' ' || inputText.value === '') {
-        alert('Write Something to add a task...')
+        alert('Write Something to add a task..')
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputText.value;

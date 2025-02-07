@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./Assets/bxs-landscape.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="midSize">
+        <!-- Page Navigation Buttons -->
+        <div class="pageNav">
+            <button type="button" id="pageUp">
+                <img src="./Assets/bxs-chevron-down.svg" alt="Down">
+            </button>
+            <button type="button" id="pageDown">
+                <img src="./Assets/bxs-chevron-up.svg" alt="Up">
+            </button>
+            <button type="button">
+                <img src="./Assets/bx-support.svg" alt="support">
+            </button>
+        </div>
+        <!-- Path Slider -->
+        <div class="shape" id="shape">
+            <svg width="325" height="325" viewBox="0 0 471 548" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="pathLen" d="M0.5 79.5C35.5 47.5 120.6 -12.4 181 4" stroke=none />
+                <path class="pathLen" d="M190 4C223.5 5.5 305.9 21.8 367.5 75" stroke=none />
+                <path class="pathLen" d="M369 85.5C394.667 108 445.4 174.1 443 258.5" stroke=none />
+                <path class="pathLen" d="M447.5 266C442.5 304.333 420.1 394.7 370.5 449.5" stroke=none />
+                <path class="pathLen" d="M371 450C355.535 471.895 297.084 518.147 187 528" stroke=none />
+                <path class="pathLen" d="M0.5 444C23.6667 466.5 91.9 513.6 179.5 522" stroke=none />
+
+                <path
+                    d="M15 90.5C38 65.5 106.2 15.5 195 15.5C283.8 15.5 354.667 65.5 379 90.5C404.833 112.833 456.5 180.2 456.5 271C456.5 361.8 406.167 432.167 381 456C357.667 481.667 288.5 533 198.5 533C108.5 533 39.3333 481.667 16 456"
+                    stroke="#ddf2fd65" stroke-width="7" />
+
+                <path class="sliderPath"
+                    d="M15 90.5C38 65.5 106.2 15.5 195 15.5C283.8 15.5 354.667 65.5 379 90.5C404.833 112.833 456.5 180.2 456.5 271C456.5 361.8 406.167 432.167 381 456C357.667 481.667 288.5 533 198.5 533C108.5 533 39.3333 481.667 16 456"
+                    stroke="#FFF6DC" stroke-width="7" />
+
+                <a href="#slide1" class="slideCircle" id="slideCircle1" for="slide1">
+                    <circle class="sliderCircleSVG" cx="15" cy="90" r="15" fill="#378CE7" />
+                </a>
+                <a href="#slide2" class="slideCircle" id="slideCircle2" for="slide2">
+                    <circle class="sliderCircleSVG" cx="197" cy="15" r="15" fill="#B3C8CF" />
+                </a>
+                <a href="#slide3" class="slideCircle" id="slideCircle3" for="slide3">
+                    <circle class="sliderCircleSVG" cx="380" cy="90" r="15" fill="#B3C8CF" />
+                </a>
+                <a href="#slide4" class="slideCircle" id="slideCircle4" for="slide4">
+                    <circle class="sliderCircleSVG" cx="456" cy="273" r="15" fill="#B3C8CF" />
+                </a>
+                <a href="#slide5" class="slideCircle" id="slideCircle5" for="slide5">
+                    <circle class="sliderCircleSVG" cx="381" cy="456" r="15" fill="#B3C8CF" />
+                </a>
+                <a href="#slide6" class="slideCircle" id="slideCircle6" for="slide6">
+                    <circle class="sliderCircleSVG" cx="198" cy="533" r="15" fill="#B3C8CF" />
+                </a>
+                <a href="#slide7" class="slideCircle" id="slideCircle7" for="slide7">
+                    <circle class="sliderCircleSVG" cx="27" cy="465" r="15" fill="#B3C8CF" />
+                </a>
+            </svg>
+            <div class="headContent text-end d-flex flex-column justify-content-center border border-0 rounded"
+                id="headContent">
+                <p class="headContentP mb-0">Biggest Classifieds</p>
+                <h1 class="mt-0">East Asia</h1>
+                <p class="headContentP">Countries</p>
+            </div>
+        </div>
+
+        <!-- Page 1 -->
+        <div class="slide row mx-0" id="slide1">
+            <div class="leftCol col-5 px-0">
+                <div class="bottomTextContent col-5 d-flex flex-column justify-content-around" id="bottomTextContent1">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <img src="./Assets/world-communication-awards-for-best-digital-experience.png" alt="logo"
+                            class="logoImg01 position-absolute">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 123</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">View Case Study</p>
+                            <img src="./Assets/arrow_right.svg" alt="arrow" class="ps-1">
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0">
+                <div class="rightColImgDiv rightColImgDiv1 is-active-slide">
+                    <img src="./Assets/nexgtv-entertainment-mobile-app-development.png" alt="nexgtv"
+                        class="imgSlide imgSlide1 imgSlideTop">
+                    <img src="./Assets/nexgtv-mobile-app-ui-design.png" alt="mobile-ui"
+                        class="imgSlide imgSlide1 imgSlideBottom">
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="slide row mx-0" id="slide2">
+            <div class="leftCol col-5 px-0 d-none">
+                <div class="bottomTextContent col-12 d-flex flex-column justify-content-around" id="bottomTextContent2">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 234</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">Coming Soon</p>
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0 d-none">
+                <div class="rightColImgDiv rightColImgDiv2">
+                    <img src="./Assets/veme-blockchain-app-developed.png" alt="nexgtv"
+                        class="imgSlide imgSlide2 position-absolute imgSlideTop" id="imgSlide2-1">
+                    <img src="./Assets/veme-app-ui-design.png" alt="mobile-ui"
+                        class="imgSlide imgSlide2 position-absolute imgSlideBottom" id="imgSlide2-2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="slide row mx-0" id="slide3">
+            <div class="leftCol col-5 px-0 d-none">
+                <div class="bottomTextContent col-12 d-flex flex-column justify-content-around" id="bottomTextContent3">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 345</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">Coming Soon</p>
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0 d-none">
+                <div class="rightColImgDiv rightColImgDiv2">
+                    <img src="./Assets/nasa-fitness-tracking-mobile-app.png" alt="nasa-app"
+                        class="imgSlide imgSlide2 position-absolute imgSlideTop" id="imgSlide3-1">
+                    <img src="./Assets/measure-total-body-weight-through-fitness-app.png" alt="mobile-ui"
+                        class="imgSlide imgSlide2 position-absolute imgSlideBottom" id="imgSlide3-2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="slide row mx-0" id="slide4">
+            <div class="leftCol col-5 px-0 d-none">
+                <div class="bottomTextContent col-12 d-flex flex-column justify-content-around" id="bottomTextContent4">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 456</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">View Case Study</p>
+                            <img src="./Assets/arrow_right.svg" alt="arrow" class="ps-1">
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0 d-none">
+                <div class="rightColImgDiv rightColImgDiv4 d-flex flex-column justify-content-between">
+                    <div class="imgSlideBottom d-flex flex-row justify-content-between align-items-start">
+                        <div>
+                            <img src="./Assets/pizza_box.png" alt="pizza-box" id="imgSlide4-1">
+                        </div>
+                        <div>
+                            <img src="./Assets/ux-strategy-for-mobile-app-devlopment.png" alt="mobile-ui"
+                                class="position-absolute" id="imgSlide4-2">
+                            <img src="./Assets/dominos-bread.png" alt="bread" id="imgSlide4-3">
+                        </div>
+                    </div>
+                    <div class="rightColImgDiv4Div imgSlideTop d-flex flex-row justify-content-between align-items-end">
+                        <img src="./Assets/domi-img1.png" alt="app-img" id="imgSlide4-4">
+                        <img src="./Assets/dominos-bread1.png" alt="bread" id="imgSlide4-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5 -->
+        <div class="slide row mx-0" id="slide5">
+            <div class="leftCol col-5 px-0 d-none">
+                <div class="bottomTextContent col-12 d-flex flex-column justify-content-around" id="bottomTextContent5">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 567</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">View Case Study</p>
+                            <img src="./Assets/arrow_right.svg" alt="arrow" class="ps-1">
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0 d-none">
+                <div class="rightColImgDiv rightColImgDiv4 d-flex flex-column justify-content-between">
+                    <div class="imgSlideBottom d-flex flex-row justify-content-between align-items-start">
+                        <div>
+                            <img src="./Assets/karavan-social-networking-app-screen.png" alt="mobile-ui"
+                                id="imgSlide5-1">
+                            <img src="./Assets/social-networking-app-case-study.png" alt="case-study"
+                                class="position-absolute" id="imgSlide5-2">
+                            <img src="./Assets/developers-for-social-media-app.png" alt="mobile-ui"
+                                class="position-absolute" id="imgSlide5-3">
+                        </div>
+                    </div>
+                    <div
+                        class="rightColImgDiv4Div imgSlideTop d-flex flex-row justify-content-start ps-5 align-items-end">
+                        <img src="./Assets/karavan_2.png" alt="app-img" id="imgSlide5-4">
+                        <img src="./Assets/karavan-social-networking-app-screen-2.png" alt="mobile-ui" id="imgSlide5-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6 -->
+        <div class="slide row mx-0" id="slide6">
+            <div class="leftCol col-5 px-0 d-none">
+                <div class="bottomTextContent col-12 d-flex flex-column justify-content-around" id="bottomTextContent6">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 678</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">View Case Study</p>
+                            <img src="./Assets/arrow_right.svg" alt="arrow" class="ps-1">
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0 d-none">
+                <div class="rightColImgDiv rightColImgDiv4 d-flex flex-column justify-content-between">
+                    <div class="imgSlideBottom d-flex flex-row justify-content-between align-items-start">
+                        <img src="./Assets/erp-app-development-service.png" alt="erp" id="imgSlide6-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 7 -->
+        <div class="slide row mx-0" id="slide7">
+            <div class="leftCol col-5 px-0 d-none">
+                <div class="bottomTextContent col-12 d-flex flex-column justify-content-around" id="bottomTextContent7">
+                    <div class="bottomTextContentMainDiv ms-5 position-relative">
+                        <img src="./Assets/mobile-app-of-the-year-by-entrepreneur.png" alt="logo"
+                            class="logoImg01 position-absolute">
+                        <div class="bottomTextContent1TextDiv position-absolute">
+                            <h1 class="bottomTextContentH1"> ABC 789</h1>
+                            <p class="bottomTextContentP">We are the best web development <br> company in the world</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between ms-5 pe-5">
+                        <button type="button"
+                            class="bg-transparent border-0 d-flex flex-row align-self-ceter justify-content-center">
+                            <p class="m-0">Coming Soon</p>
+                        </button>
+                        <button type="button" class="skipBtn bg-transparent border-0">
+                            S&nbsp;K&nbsp;I&nbsp;P
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightCol col-7 p-0 d-none">
+                <div class="rightColImgDiv rightColImgDiv2">
+                    <img src="./Assets/melltoo-img2.png" alt="meltoo"
+                        class="imgSlide imgSlide2 position-absolute imgSlideTop" id="imgSlide2-1">
+                    <img src="./Assets/melltoo-img1.png" alt="mobile-ui"
+                        class="imgSlide imgSlide2 position-absolute imgSlideBottom" id="imgSlide2-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="smallSize">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Page 1 -->
+                <div class="carouselImg1 carousel-item active" data-bs-interval="10000">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between">
+                            <img src="./Assets/nexgtv-entertainment-mobile-app-development.png" alt="nexgtv"
+                                class="carouselImg1">
+                            <img src="./Assets/nexgtv-mobile-app-ui-design.png" alt="mobile-ui" class="">
+                        </div>
+                        <div class="carouselText carouselText1">
+                            <h1>ABC 1</h1>
+                            <h4>Sample Text for ABC 1</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page 2 -->
+                <div class="carouselImg2 carousel-item" data-bs-interval="2000">
+                    <div>
+                        <div>
+                            <img src="./Assets/veme-blockchain-app-developed.png" alt="nexgtv" class="carouselImg2">
+                            <img src="./Assets/veme-app-ui-design.png" alt="mobile-ui" class="carouselImg2">
+                        </div>
+                        <div>
+                            <h1>ABC 1</h1>
+                            <h4>Sample Text for ABC 1</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Page 3 -->
+                <div class="carouselImg3 carousel-item">
+                    <div>
+                        <div class="d-flex justify-content-around align-items-center">
+                            <img src="./Assets/nasa-fitness-tracking-mobile-app.png" alt="nasa-app">
+                            <img src="./Assets/measure-total-body-weight-through-fitness-app.png" alt="mobile-ui"
+                                class="">
+                        </div>
+                        <div class="carouselText carouselText1">
+                            <h1>ABC 1</h1>
+                            <h4>Sample Text for ABC 1</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page 4 -->
+                <div class="carouselImg4 carousel-item">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src="./Assets/pizza_box.png" alt="pizza-box">
+                        <img src="./Assets/ux-strategy-for-mobile-app-devlopment.png" alt="mobile-ui">
+                    </div>
+                    <div class="carouselText carouselText1">
+                        <h1>ABC 1</h1>
+                        <h4>Sample Text for ABC 1</h4>
+                    </div>
+                </div>
+                <!-- Page 5 -->
+                <div class="carouselImg5 carousel-item">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src="./Assets/karavan-social-networking-app-screen.png" alt="mobile-ui">
+                        <img src="./Assets/social-networking-app-case-study.png" alt="case-study">
+                    </div>
+                    <div class="carouselText carouselText1">
+                        <h1>ABC 1</h1>
+                        <h4>Sample Text for ABC 1</h4>
+                    </div>
+                </div>
+                <!-- Page 6 -->
+                <div class="carouselImg6 carousel-item">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src="./Assets/erp-app-development-service.png" alt="erp">
+                    </div>
+                    <div class="carouselText carouselText1">
+                        <h1>ABC 1</h1>
+                        <h4>Sample Text for ABC 1</h4>
+                    </div>
+                </div>
+                <!-- Page 7 -->
+                <div class="carouselImg7 carousel-item">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <img src="./Assets/melltoo-img2.png" alt="meltoo">
+                        <img src="./Assets/melltoo-img1.png" alt="mobile-ui">
+                    </div>
+                    <div class="carouselText carouselText1">
+                        <h1>ABC 1</h1>
+                        <h4>Sample Text for ABC 1</h4>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+
+        <script src="./index.js"></script>
+    </div>
+</body>
+
+</html>
